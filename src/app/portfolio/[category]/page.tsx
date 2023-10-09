@@ -1,5 +1,5 @@
-import React from 'react';
-import styles from './page.module.css';
+import React from "react";
+import styles from "./page.module.css";
 import Button from "@/components/Button/Button";
 import Image from "next/image";
 
@@ -19,10 +19,11 @@ const Category: React.FC<{ params: MatchParams }> = ({ params }) => {
                 </div>
                 <div className={styles.imgContainer}>
                     <Image
-                           className={styles.img}
-                           fill={true}
-                           src="https://picsum.photos/1600/400"
-                           alt="" />
+                        className={styles.img}
+                        fill={true}
+                        src="https://picsum.photos/1600/400"
+                        alt=""
+                    />
                 </div>
             </div>
             <div className={styles.item}>
@@ -33,10 +34,11 @@ const Category: React.FC<{ params: MatchParams }> = ({ params }) => {
                 </div>
                 <div className={styles.imgContainer}>
                     <Image
-                           className={styles.img}
-                           fill={true}
-                           src="https://picsum.photos/1600/400"
-                           alt="" />
+                        className={styles.img}
+                        fill={true}
+                        src="https://picsum.photos/1600/400"
+                        alt=""
+                    />
                 </div>
             </div>
             <div className={styles.item}>
@@ -47,14 +49,15 @@ const Category: React.FC<{ params: MatchParams }> = ({ params }) => {
                 </div>
                 <div className={styles.imgContainer}>
                     <Image
-                           className={styles.img}
-                           fill={true}
-                           src="https://picsum.photos/1600/400"
-                           alt="" />
+                        className={styles.img}
+                        fill={true}
+                        src="https://picsum.photos/1600/400"
+                        alt=""
+                    />
                 </div>
             </div>
         </div>
     );
-}
+};
 
 export default Category;

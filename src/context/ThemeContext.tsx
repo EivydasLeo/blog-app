@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { createContext, useState, ReactNode } from "react";
 
 // Define the shape of the context
@@ -10,7 +10,7 @@ interface ThemeContextType {
 // Create the context with a default value
 export const ThemeContext = createContext<ThemeContextType>({
     mode: "light",
-    toggle: () => {}
+    toggle: () => {},
 });
 
 // Define the props for the ThemeProvider
@@ -23,13 +23,11 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
 
     const toggle = () => {
         setMode((prev) => (prev === "dark" ? "light" : "dark"));
-    }
+    };
 
     return (
-    <ThemeContext.Provider value={{ toggle, mode }}>
-        <div className={`theme ${mode}`}>
-            {children}
-        </div>
-    </ThemeContext.Provider>
-);
+        <ThemeContext.Provider value={{ toggle, mode }}>
+            <div className={`theme ${mode}`}>{children}</div>
+        </ThemeContext.Provider>
+    );
 };

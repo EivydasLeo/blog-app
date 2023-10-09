@@ -18,6 +18,6 @@ const Portfolio = () => {
                 </Link>
             </div>
         </div>
-    )
-}
-export default Portfolio
+    );
+};
+export default Portfolio;

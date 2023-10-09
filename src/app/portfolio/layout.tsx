@@ -1,5 +1,5 @@
-import React, { ReactNode } from 'react';
-import styles from './page.module.css';
+import React, { ReactNode } from "react";
+import styles from "./page.module.css";
 
 interface LayoutProps {
     children: ReactNode;

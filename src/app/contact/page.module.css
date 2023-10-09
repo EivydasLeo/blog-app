@@ -1,5 +1,4 @@
 .container {
-
 }
 
 .title {
@@ -41,7 +40,8 @@
     gap: 20px;
 }
 
-.input, .textArea {
+.input,
+.textArea {
     padding: 20px;
     background-color: transparent;
     outline: none;

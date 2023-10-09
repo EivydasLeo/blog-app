@@ -1,14 +1,14 @@
-import React, {ReactNode} from 'react'
+import React, { ReactNode } from "react";
 
 interface BlogLayoutProps {
     children: ReactNode;
 }
 
-const BlogLayout = ({children}: BlogLayoutProps) => {
+const BlogLayout = ({ children }: BlogLayoutProps) => {
     return (
         <>
             <div>{children}</div>
         </>
-    )
-}
-export default BlogLayout
+    );
+};
+export default BlogLayout;

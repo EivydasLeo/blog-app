@@ -9,7 +9,7 @@
     margin-bottom: 100px;
 }
 
-.item:nth-child(2n+1) {
+.item:nth-child(2n + 1) {
     flex-direction: row-reverse;
 }
 

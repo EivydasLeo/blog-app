@@ -1,9 +1,8 @@
 import Image from "next/image";
-import styles from "./page.module.css";
+import styles from "./page.module.scss";
 import Hero from "public/hero.png";
 import Button from "@/components/Button/Button";
 import React from "react";
-
 export default function Home() {
     return (
         <div className={styles.container}>

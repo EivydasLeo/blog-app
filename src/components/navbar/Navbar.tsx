@@ -2,7 +2,7 @@
 import React from "react";
 import Link from "next/link";
 import { links } from "@/utils/dummyData/navbar";
-import styles from "./navbar.module.css";
+import styles from "./navbar.module.scss";
 import DarkModeToggle from "@/components/DarkModeToggle/DarkModeToggle";
 const Navbar = () => {
     return (

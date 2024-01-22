@@ -3,55 +3,41 @@ import styles from "./page.module.scss";
 import Link from "next/link";
 import Image from "next/image";
 
-const Blog = () => {
+async function getData() {
+    const res = await fetch("http://localhost:3000/api/posts", {
+        cache: "no-store",
+    });
+
+    if (!res.ok) {
+        throw new Error("Failed to fetch data");
+    }
+
+    return await res.json();
+}
+
+const Blog = async () => {
+    const data = await getData();
     return (
         <div className={styles.mainContainer}>
-            <Link href="/blog/testId" className={styles.container}>
-                <div className={styles.imageContainer}>
-                    <Image
-                        src="https://picsum.photos/1600/400"
-                        alt=""
-                        width={400}
-                        height={250}
-                        className={styles.image}
-                    />
-                </div>
-                <div className={styles.content}>
-                    <h1 className={styles.title}>Test</h1>
-                    <p className={styles.desc}>Desc</p>
-                </div>
-            </Link>
-            <Link href="/blog/testId" className={styles.container}>
-                <div className={styles.imageContainer}>
-                    <Image
-                        src="https://picsum.photos/1600/400"
-                        alt=""
-                        width={400}
-                        height={250}
-                        className={styles.image}
-                    />
-                </div>
-                <div className={styles.content}>
-                    <h1 className={styles.title}>Test</h1>
-                    <p className={styles.desc}>Desc</p>
-                </div>
-            </Link>
-            <Link href="/blog/testId" className={styles.container}>
-                <div className={styles.imageContainer}>
-                    <Image
-                        src="https://picsum.photos/1600/400"
-                        alt=""
-                        width={400}
-                        height={250}
-                        className={styles.image}
-                    />
-                </div>
-                <div className={styles.content}>
-                    <h1 className={styles.title}>Test</h1>
-                    <p className={styles.desc}>Desc</p>
-                </div>
-            </Link>
+            {data.map((item) => (
+                <Link key={item.id} href={`/blog/${item._id}`} className={styles.container}>
+                    <div className={styles.imageContainer}>
+                        <Image
+                            src={item.image}
+                            alt=""
+                            width={400}
+                            height={250}
+                            className={styles.image}
+                        />
+                    </div>
+                    <div className={styles.content}>
+                        <h1 className={styles.title}>{item.title}</h1>
+                        <p className={styles.desc}>{item.desc}</p>
+                    </div>
+                </Link>
+            ))}
         </div>
     );
 };
+
 export default Blog;

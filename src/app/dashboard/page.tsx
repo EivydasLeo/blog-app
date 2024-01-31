@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import styles from "./page.module.scss";
+import styles from "@/scss/app/dashboard/dashboard.module.scss";
 import useSWR from "swr";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
@@ -11,7 +11,13 @@ const Dashboard = () => {
 
     const router = useRouter();
 
-    const fetcher = async (...args) => await fetch(...args).then(async (res) => await res.json());
+    useEffect(() => {
+        if (session.status === "unauthenticated") {
+            router?.push("/dashboard/login");
+        }
+    }, [session.status, router]);
+
+    const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
     const { data, mutate, error, isLoading } = useSWR(
         `/api/posts?username=${session?.data?.user.name}`,
@@ -76,9 +82,7 @@ const Dashboard = () => {
                                   <h2 className={styles.postTitle}>{post.title}</h2>
                                   <span
                                       className={styles.delete}
-                                      onClick={async () => {
-                                          await handleDelete(post._id);
-                                      }}
+                                      onClick={() => handleDelete(post._id)}
                                   >
                                       X
                                   </span>

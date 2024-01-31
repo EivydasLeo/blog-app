@@ -1,7 +1,7 @@
 import React from "react";
-import styles from "./page.module.scss";
+import styles from "@/scss/app/contact/contact.module.scss";
 import Image from "next/image";
-import Button from "@/components/Button/Button";
+import Button from "@/components/button/button";
 
 export const metadata = {
     title: "Contact",

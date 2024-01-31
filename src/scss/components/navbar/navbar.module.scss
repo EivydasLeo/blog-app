@@ -1,7 +1,7 @@
 .container {
     height: 100px;
     display: flex;
-    justify-content: space-between;
+    gap: 50px;
     align-items: center;
 }
 
@@ -15,6 +15,7 @@
     align-items: center;
     gap: 20px;
 }
+
 
 .logout {
     padding: 5px;

@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./page.module.scss";
+import styles from "@/scss/app/stories/[id]/storiesId.module.scss";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 

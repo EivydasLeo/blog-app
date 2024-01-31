@@ -1,14 +1,14 @@
 import React, { type ReactNode } from "react";
 
-interface BlogLayoutProps {
+interface StoriesLayoutProps {
     children: ReactNode;
 }
 
-const BlogLayout = ({ children }: BlogLayoutProps) => {
+const StoriesLayout = ({ children }: StoriesLayoutProps) => {
     return (
         <>
             <div>{children}</div>
         </>
     );
 };
-export default BlogLayout;
+export default StoriesLayout;

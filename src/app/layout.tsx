@@ -1,11 +1,19 @@
-import "./globals.scss";
-import { Inter, Roboto, Poppins } from "next/font/google";
-import Navbar from "@/components/navbar/Navbar";
-import Footer from "@/components/footer/Footer";
-import { ThemeProvider } from "@/context/ThemeContext";
-import AuthProvider from "@/components/AuthProvider/AuthProvider";
+import "../scss/global/globals.scss";
+import { Inter, Roboto_Mono } from "next/font/google";
+import Navbar from "@/components/navbar/navbar";
+import Footer from "@/components/footer/footer";
+import { ThemeProvider } from "@/context/themeContext";
+import AuthProvider from "@/components/authProvider/authProvider";
 
-const inter = Inter({ subsets: ["latin"] });
+export const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+})
+ 
+export const roboto_mono = Roboto_Mono({
+  subsets: ['latin'],
+  display: 'swap',
+})
 
 export const metadata = {
     title: "Blog App",

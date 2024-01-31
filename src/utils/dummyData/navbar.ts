@@ -6,18 +6,18 @@ export const links = [
     },
     {
         id: 2,
-        title: "Portfolio",
-        url: "/portfolio",
+        title: "About",
+        url: "/about",
     },
     {
         id: 3,
-        title: "Blog",
-        url: "/blog",
+        title: "Stories",
+        url: "/stories",
     },
     {
         id: 4,
-        title: "About",
-        url: "/about",
+        title: "Books",
+        url: "/books",
     },
     {
         id: 5,

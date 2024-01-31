@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./page.module.scss";
+import styles from "@/scss/app/stories/stories.module.scss";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -20,7 +20,7 @@ const Blog = async () => {
     return (
         <div className={styles.mainContainer}>
             {data.map((item) => (
-                <Link key={item.id} href={`/blog/${item._id}`} className={styles.container}>
+                <Link key={item.id} href={`/stories/${item._id}`} className={styles.container}>
                     <div className={styles.imageContainer}>
                         <Image
                             src={item.image}

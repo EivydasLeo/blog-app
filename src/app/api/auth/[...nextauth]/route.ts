@@ -36,12 +36,31 @@ const handler = NextAuth({
                     throw new Error(err);
                 }
             },
+            credentials: undefined,
         }),
         GoogleProvider({
             clientId: process.env.GOOGLE_CLIENT_ID,
             clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+            authorization: {
+                params: {
+                    prompt: "login",
+                },
+            },
         }),
     ],
+    callbacks: {
+        async signIn({ account, profile }) {
+            if (
+                account.provider === "google" &&
+                profile.email !== process.env.GOOGLE_CLIENT_EMAIL
+            ) {
+                throw new Error("Access Denied");
+            }
+
+            return true;
+        },
+    },
+
     pages: {
         error: "/dashboard/login",
     },

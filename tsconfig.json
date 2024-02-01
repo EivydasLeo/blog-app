@@ -30,6 +30,6 @@
         ".next/types/**/*.ts",
         "postcss.config.js",
         "next.config.js"
-    ],
+,       "src/app/api/auth/[...nextauth]/route.js"    ],
     "exclude": ["node_modules"]
 }

@@ -1,10 +1,12 @@
 import React from "react";
-import styles from "@/scss/app/stories/stories.module.scss";
+import styles from "./stories.module.scss";
 import Link from "next/link";
 import Image from "next/image";
 
+export const dynamic = "force-dynamic";
+
 async function getData() {
-    const res = await fetch("http://localhost:3000/api/posts", {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/posts`, {
         cache: "no-store",
     });
 
@@ -15,7 +17,7 @@ async function getData() {
     return await res.json();
 }
 
-const Blog = async () => {
+const Stories = async () => {
     const data = await getData();
     return (
         <div className={styles.mainContainer}>
@@ -40,4 +42,4 @@ const Blog = async () => {
     );
 };
 
-export default Blog;
+export default Stories;

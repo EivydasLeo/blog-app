@@ -1,27 +1,46 @@
+@import "../../global/colors.scss";
+@import "../../global/functions.scss";
+@import "../../global//typography.scss";
+
 .container {
-    height: 100px;
+    height: rem(100px);
     display: flex;
-    gap: 50px;
+    gap: rem(50px);
     align-items: center;
 }
 
 .logo {
+    font-family: initial;
     font-weight: bold;
-    font-size: 22px;
+    font-size: rem(40px);
+    color: $color-desaturated-red;
 }
 
 .links {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: rem(20px);
+    font-weight: bold;
+    font-size: rem(12px);
+    line-height: rem(16px);
+
+    // @include text-navbar-links;
+
+    .link:hover {
+        color: $color-desaturated-red;
+    }
+
 }
 
+.active {
+    color: $color-desaturated-red;
+}
 
 .logout {
-    padding: 5px;
+    padding: rem(6px);
     border: none;
     background-color: #53c28b;
-    color: white;
+    color: $color-white;
     cursor: pointer;
-    border-radius: 3px;
+    border-radius: rem(4px);
 }

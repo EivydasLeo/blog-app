@@ -1,0 +1,16 @@
+$color-desaturated-red: #be7c68;
+$color-black: #131516;
+$color-footer-copyright: #707c84;
+$color-white-smoke: #F5F5F5;
+$color-white: #FFFFFF;
+
+
+.light {
+    background-color: $color-white-smoke;
+    color: #111;
+}
+
+.dark {
+    background-color: #111;
+    color: #bbb;
+}

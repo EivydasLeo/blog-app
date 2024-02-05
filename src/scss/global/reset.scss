@@ -13,12 +13,14 @@ body {
   position: relative;
   min-height: 100%;
 }
-// body {
-//   font-family: $font-family;
-// }
+body {
+  font-family: $font-family-montserrat;
+}
+
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 ul {
@@ -47,16 +49,6 @@ img {
 
 .theme {
     transition: 1s all ease;
-}
-
-.light {
-    background-color: white;
-    color: #111;
-}
-
-.dark {
-    background-color: #111;
-    color: #bbb;
 }
 
 .container {

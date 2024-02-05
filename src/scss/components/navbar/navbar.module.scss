@@ -1,6 +1,7 @@
 @import "../../global/colors.scss";
 @import "../../global/functions.scss";
 @import "../../global//typography.scss";
+@import "../../global//responsive.scss";
 
 .container {
     height: rem(100px);
@@ -24,7 +25,7 @@
     font-size: rem(12px);
     line-height: rem(16px);
 
-    // @include text-navbar-links;
+    @include text-navbar-links;
 
     .link:hover {
         color: $color-desaturated-red;

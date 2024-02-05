@@ -4,19 +4,33 @@ import styles from "@/scss/app/dashboard/(auth)/login/login.module.scss";
 import { signIn, useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 
-const Login = () => {
-    const session = useSession();
+const Login: React.FC = () => {
+    const { status } = useSession();
     const router = useRouter();
 
     useEffect(() => {
-        if (session.status === "authenticated") {
+        if (status === "authenticated") {
             router?.push("/dashboard");
         }
-    }, [session.status, router]);
+    }, [status, router]);
+
+    const handleSignIn = async (): Promise<void> => {
+        try {
+            await signIn("google");
+        } catch (error) {
+            console.error("Error during sign in:", error);
+        }
+    };
 
     return (
         <div className={styles.container}>
-            <button onClick={async () => await signIn("google")}>Login with Google</button>
+            <button
+                onClick={() => {
+                    void handleSignIn();
+                }}
+            >
+                Login with Google
+            </button>
         </div>
     );
 };

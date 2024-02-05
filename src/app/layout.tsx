@@ -1,4 +1,5 @@
-import "@/scss/global.scss";
+import "@/scss/global/global.scss";
+import React from "react";
 import Navbar from "@/components/navbar/navbar";
 import Footer from "@/components/footer/footer";
 import { ThemeProvider } from "@/context/themeContext";

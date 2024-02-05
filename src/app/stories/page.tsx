@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./stories.module.scss";
+import styles from "@/scss/app/stories/stories.module.scss";
 import Link from "next/link";
 import Image from "next/image";
 

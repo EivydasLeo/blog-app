@@ -1,0 +1,51 @@
+@import "../../global/colors.scss";
+@import "../../global/functions.scss";
+@import "../../global//typography.scss";
+@import "../../global//responsive.scss";
+
+.container {
+    display: flex;
+    align-items: center;
+    gap: rem(50px);
+    width: 100%;
+}
+
+.logo {
+    font-family: initial;
+    font-weight: $font-weight-bold;
+    font-size: $font-size-40;
+    color: $color-desaturated-red;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    gap: rem(20px);
+
+    @include text-navbar-links;
+
+    .link:hover {
+        color: $color-desaturated-red;
+    }
+}
+
+.active {
+    color: $color-desaturated-red;
+}
+
+.footer_container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.footer_links {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: rem(20px);
+
+    .footer_link:hover {
+        color: $color-desaturated-red;
+    }
+}

@@ -60,3 +60,7 @@ export const items = {
         },
     ],
 };
+
+export const logo = {
+    header_logo: "SKA",
+};

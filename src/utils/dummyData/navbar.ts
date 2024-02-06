@@ -16,17 +16,23 @@ export const links = [
     },
     {
         id: 4,
+        title: "QUOTES",
+        url: "/quotes",
+    },
+    {
+        id: 5,
         title: "BOOKS",
         url: "/books",
     },
     {
-        id: 5,
+        id: 6,
         title: "CONTACT",
         url: "/contact",
     },
     {
-        id: 6,
+        id: 7,
         title: "DASHBOARD",
         url: "/dashboard",
+        isHidden: true,
     },
 ];

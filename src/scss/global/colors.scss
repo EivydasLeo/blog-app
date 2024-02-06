@@ -1,13 +1,17 @@
 $color-desaturated-red: #be7c68;
 $color-black: #131516;
 $color-footer-copyright: #707c84;
-$color-white-smoke: #F5F5F5;
-$color-white: #FFFFFF;
-
+$color-white-smoke: #f5f5f5;
+$color-white: #ffffff;
+$color-0: #be7c68;
 
 .light {
+    background: linear-gradient(to right, $color-white-smoke, transparent 5%),
+        url("/background/brown-material.jpg");
     background-color: $color-white-smoke;
-    color: #111;
+    background-position: 70vw 0;
+    background-repeat: no-repeat;
+    background-size: 30% 100%;
 }
 
 .dark {

@@ -1,8 +1,14 @@
+@import "../../global/colors.scss";
+@import "../../global/functions.scss";
+@import "../../global//typography.scss";
+@import "../../global//responsive.scss";
+
 .container {
-    height: 50px;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border: 10px solid red;
 }
 
 .social {
@@ -14,4 +20,8 @@
 .icon {
     opacity: 0.6;
     cursor: pointer;
+}
+
+.links {
+    background-color: red;
 }

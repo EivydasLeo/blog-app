@@ -3,6 +3,7 @@
 $font-size-72: rem(72px);
 $font-size-64: rem(64px);
 $font-size-48: rem(48px);
+$font-size-40: rem(40px);
 $font-size-36: rem(36px);
 $font-size-24: rem(24px);
 $font-size-22: rem(22px);
@@ -39,8 +40,8 @@ $line-height-16: rem(16px);
     font-size: $font-size;
     line-height: $line-height;
     color: $color;
-  }
-  
-  @mixin text-navbar-links {
+}
+
+@mixin text-navbar-links {
     @include text($font-weight-bold, $font-size-12, $line-height-16, $color-black);
-  }
+}

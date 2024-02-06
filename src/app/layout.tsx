@@ -1,10 +1,10 @@
 "use client";
 import "@/scss/global/global.scss";
 import React from "react";
-import { ThemeProvider } from "@/context/themeContext";
-import AuthProvider from "@/components/authProvider/authProvider";
-import Navbar from "@/components/navbar/navbar";
-import Footer from "@/components/footer/footer";
+import { ThemeProvider } from "@/Context/ThemeContext";
+import AuthProvider from "@/components/AuthProvider/AuthProvider";
+import Navbar from "@/components/Navbar/Navbar";
+import Footer from "@/components/Footer/Footer";
 
 export const metadata = {
     title: "Blog App",

@@ -6,22 +6,19 @@
 .container {
     height: 100%;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border: 10px solid red;
+    flex-direction: column;
+    gap: rem(20px);
+    min-height: rem(100px);
 }
 
 .social {
     display: flex;
     align-items: center;
-    gap: 10px;
-}
-
-.icon {
-    opacity: 0.6;
-    cursor: pointer;
+    flex-basis: 30%;
 }
 
 .links {
-    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }

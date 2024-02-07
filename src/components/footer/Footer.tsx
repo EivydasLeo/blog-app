@@ -1,22 +1,19 @@
 import React from "react";
 import styles from "@/scss/components/footer/footer.module.scss";
-import Image from "next/image";
-import Links from "../Links/Links";
+import { Links } from "../Links/Links";
+import { SocialLinks } from "../SocialLinks/SocialLinks";
+import { Copyright } from "../Copyright/Copyright";
 
-const Footer: React.FC = () => {
+export const Footer: React.FC = () => {
     return (
         <div className={styles.container}>
-            <Links isFooter />
-            <div className={styles.social}>
-                <Image
-                    className={styles.icon}
-                    src="/1.png"
-                    height={15}
-                    width={15}
-                    alt="Facebook Account"
-                />
+            <div className={styles.links}>
+                <Links isFooter isAuthenticated={false} />
+                <div className={styles.social}>
+                    <SocialLinks />
+                </div>
             </div>
+            <Copyright />
         </div>
     );
 };
-export default Footer;

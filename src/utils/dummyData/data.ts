@@ -1,3 +1,42 @@
+export const linksData = [
+    {
+        id: 1,
+        title: "Home",
+        url: "/",
+    },
+    {
+        id: 2,
+        title: "About",
+        url: "/about",
+    },
+    {
+        id: 3,
+        title: "Stories",
+        url: "/stories",
+    },
+    {
+        id: 4,
+        title: "Quotes",
+        url: "/quotes",
+    },
+    {
+        id: 5,
+        title: "Books",
+        url: "/books",
+    },
+    {
+        id: 6,
+        title: "Contact",
+        url: "/contact",
+    },
+    {
+        id: 7,
+        title: "Dashboard",
+        url: "/dashboard",
+        isHidden: true,
+    },
+];
+
 export const LogoData = {
     headerLogo: "SKA",
 };

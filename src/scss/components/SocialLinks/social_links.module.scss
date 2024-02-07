@@ -1,0 +1,19 @@
+@import "../../global/colors.scss";
+@import "../../global/functions.scss";
+@import "../../global//typography.scss";
+@import "../../global//responsive.scss";
+
+.social_container {
+    display: flex;
+    gap: rem(30px);
+}
+
+.social_link {
+    position: relative;
+    width: rem(20px);
+    height: rem(20px);
+}
+
+.social_icon {
+    cursor: pointer;
+}

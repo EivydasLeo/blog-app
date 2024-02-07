@@ -2,9 +2,9 @@
 import React from "react";
 import styles from "@/scss/components/navbar/navbar.module.scss";
 import { signOut, useSession } from "next-auth/react";
-import Links from "../Links/Links";
+import { Links } from "../Links/Links";
 
-const Navbar: React.FC = () => {
+export const Navbar: React.FC = () => {
     const { status } = useSession();
 
     const handleSignOut = async (): Promise<void> => {
@@ -31,5 +31,3 @@ const Navbar: React.FC = () => {
         </div>
     );
 };
-
-export default Navbar;

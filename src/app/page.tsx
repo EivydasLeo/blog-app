@@ -1,8 +1,8 @@
-// import Image from "next/image";
 import styles from "@/scss/app/page.module.scss";
 import Button from "@/components/Button/Button";
 import React from "react";
-export default function Home() {
+
+const Home: React.FC = (): React.ReactNode => {
     return (
         <div className={styles.container}>
             <div className={styles.item}>
@@ -10,7 +10,6 @@ export default function Home() {
                 <h1 className={styles.title}>I’m Greta Ska</h1>
                 <h2>Food Critic / Influencer / Blogger</h2>
                 <p className={styles.desc}>
-                    {" "}
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque nihil molestiae
                     voluptas suscipit, odio delectus veritatis, dolore a fugit vero commodi illum
                     corrupti incidunt ut nesciunt magnam accusantium mollitia. Odit debitis non
@@ -26,4 +25,6 @@ export default function Home() {
             </div>
         </div>
     );
-}
+};
+
+export default Home;

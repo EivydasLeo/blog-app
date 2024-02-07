@@ -64,3 +64,9 @@ export const items = {
 export const logo = {
     header_logo: "SKA",
 };
+
+export const socialLinks = [
+    { src: "/icons/facebook.png", alt: "Facebook Account", href: "https://www.facebook.com/" },
+    { src: "/icons/instagram.png", alt: "Instagram Account", href: "https://www.instagram.com/" },
+    { src: "/icons/tiktok.png", alt: "TikTok Account", href: "https://www.tiktok.com/" },
+];

@@ -37,6 +37,7 @@
     display: flex;
     align-items: center;
     width: 100%;
+    flex: 2;
 }
 
 .footer_links {
@@ -44,6 +45,7 @@
     justify-content: center;
     width: 100%;
     gap: rem(20px);
+    font-size: $font-size-14;
 
     .footer_link:hover {
         color: $color-desaturated-red;

@@ -3,17 +3,18 @@
 @import "../../global//typography.scss";
 @import "../../global//responsive.scss";
 
-.social_container {
+.container {
     display: flex;
     gap: rem(30px);
 }
 
-.social_link {
+.link {
     position: relative;
     width: rem(20px);
     height: rem(20px);
 }
 
-.social_icon {
+.icon:hover {
     cursor: pointer;
+    filter: brightness(0%);
 }

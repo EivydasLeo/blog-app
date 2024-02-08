@@ -1,27 +1,17 @@
 import styles from "@/scss/app/page.module.scss";
 import Button from "@/components/Button/Button";
 import React from "react";
+import { ArticleCard } from "@/components/ArticleCard/ArticleCard";
+import { PersonData } from "@/utils/dummyData/data";
 
 const Home: React.FC = (): React.ReactNode => {
+    const { title, subtitle, text } = PersonData;
     return (
         <div className={styles.container}>
             <div className={styles.item}>
                 <span>------Welcome</span>
-                <h1 className={styles.title}>I’m Greta Ska</h1>
-                <h2>Food Critic / Influencer / Blogger</h2>
-                <p className={styles.desc}>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque nihil molestiae
-                    voluptas suscipit, odio delectus veritatis, dolore a fugit vero commodi illum
-                    corrupti incidunt ut nesciunt magnam accusantium mollitia. Odit debitis non
-                    excepturi ea rem iusto repellendus, tempora, reiciendis ex, facere provident
-                    quaerat molestias consequatur! Ipsum quis ipsam minus omnis numquam dolorem ea,
-                    rerum impedit nostrum fugiat deserunt animi corrupti esse id dolores maiores?
-                    Rem numquam possimus quas atque officia est, vel veritatis eligendi blanditiis
-                    porro quae labore laboriosam animi perferendis quasi! Modi molestiae laborum
-                    quae commodi natus deleniti. Perferendis natus neque dolorem dignissimos nam
-                    ducimus, consequatur harum labore illum!
-                </p>
-                <Button text="My stories" url="/" />
+                <ArticleCard title={title} subtitle={subtitle} text={text} />
+                <Button text="Join insider" url="/" />
             </div>
         </div>
     );

@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import styles from "@/scss/components/SocialLinks/social_links.module.scss";
+import styles from "@/scss/components/SocialLinks/socialLinks.module.scss";
 import { SocialLinksData } from "@/utils/dummyData/data";
 import Link from "next/link";
 

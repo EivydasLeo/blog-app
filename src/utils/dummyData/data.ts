@@ -51,3 +51,11 @@ export const CopyrightData = {
     copyrightDate: `© ${new Date().getFullYear()} Food Blogger & Influencer`,
     copyrightText: "Powered by Food Blogger & Influencer",
 };
+
+export const PersonData = {
+    title: "I’m Dianna Adams",
+    subtitle: "Food Critic / Influencer / Blogger",
+    text: `Massa urna magnis dignissim id euismod porttitor vitae etiam viverra nunc at
+    adipiscing sit morbi aliquet mauris porttitor nisi, senectus pharetra, ac porttitor
+    orci`,
+};

@@ -1,8 +1,5 @@
-@import "../../global/colors.scss";
-@import "../../global/functions.scss";
-@import "../../global//typography.scss";
-@import "../../global//responsive.scss";
-@import "../../global/font.scss";
+@import "@/scss/global/font";
+@import "@/scss/global/variables";
 
 .container {
     display: flex;

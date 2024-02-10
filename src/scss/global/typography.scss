@@ -33,8 +33,6 @@ $line-height-22: rem(22px);
 $line-height-18: rem(18px);
 $line-height-16: rem(16px);
 
-// Font styles
-
 @mixin text($font-weight, $font-size, $line-height, $color) {
     font-weight: $font-weight;
     font-size: $font-size;

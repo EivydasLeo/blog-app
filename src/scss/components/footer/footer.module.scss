@@ -1,13 +1,10 @@
-@import "../../global/colors.scss";
-@import "../../global/functions.scss";
-@import "../../global//typography.scss";
-@import "../../global//responsive.scss";
+@import "@/scss/global/variables";
 
 .container {
     height: 100%;
     display: flex;
     flex-direction: column;
-    gap: rem(20px);
+    gap: rem(50px);
     min-height: rem(100px);
 }
 

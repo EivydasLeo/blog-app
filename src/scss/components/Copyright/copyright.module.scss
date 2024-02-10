@@ -1,7 +1,4 @@
-@import "../../global/colors.scss";
-@import "../../global/functions.scss";
-@import "../../global//typography.scss";
-@import "../../global//responsive.scss";
+@import "@/scss/global/variables";
 
 .container {
     display: flex;
@@ -11,5 +8,5 @@
 
 .text {
     font-size: $font-size-14;
-    color: $color-footer-copyright;
+    color: $color-grayish-blue;
 }

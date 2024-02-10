@@ -5,7 +5,7 @@ const nextConfig = {
         domains: ["picsum.photos", "images.pexels.com"],
     },
     sassOptions: {
-        includePaths: [path.join(__dirname, "styles")],
+        includePaths: [path.join(__dirname, "scss")],
     },
     // After project is finished remove this two ignores!!!!!!!
     typescript: {

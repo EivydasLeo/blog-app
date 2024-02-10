@@ -28,4 +28,5 @@ const postSchema = new Schema(
     { timestamps: true },
 );
 
+// eslint-disable-next-line @typescript-eslint/strict-boolean-expressions
 export default mongoose.models.Post || mongoose.model("Post", postSchema);

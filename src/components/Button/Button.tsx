@@ -7,12 +7,10 @@ interface ButtonProps {
     url: string;
 }
 
-const Button: React.FC<ButtonProps> = ({ text, url }) => {
+export const Button: React.FC<ButtonProps> = ({ text, url }) => {
     return (
         <Link href={url}>
             <button className={styles.container}>{text}</button>
         </Link>
     );
 };
-
-export default Button;

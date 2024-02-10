@@ -1,5 +1,5 @@
 "use client";
-import "@/scss/global/global.scss";
+import "@/scss/global.scss";
 import React from "react";
 import { ThemeProvider } from "@/Context/ThemeContext";
 import AuthProvider from "@/components/AuthProvider/AuthProvider";

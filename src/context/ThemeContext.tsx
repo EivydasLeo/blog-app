@@ -14,7 +14,7 @@ export const ThemeContext = createContext<ThemeContextType>({
 });
 
 export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
-    const [mode] = useState<string>("light brown");
+    const [mode] = useState<string>("light");
 
     return (
         <ThemeContext.Provider value={{ mode }}>

@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect } from "react";
-import styles from "@/scss/app/dashboard/(auth)/login/login.module.scss";
+import styles from "@/scss/app/dashboard/login/login.module.scss";
 import { signIn, useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 

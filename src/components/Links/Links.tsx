@@ -21,9 +21,11 @@ export const Links: React.FC<LinksProps> = ({ isFooter, isAuthenticated }) => {
 
     return (
         <div className={isFooter ? styles.footer_container : styles.container}>
-            <Link href="/" className={styles.logo}>
-                {headerLogo}
-            </Link>
+            {!isFooter && (
+                <Link href="/" className={styles.logo}>
+                    {headerLogo}
+                </Link>
+            )}
 
             <div className={isFooter ? styles.footer_links : styles.links}>
                 {filteredLinks.map(({ id, url, title }) => (

@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import styles from "@/scss/app/dashboard/dashboard.module.scss";
 import useSWR from "swr";
 import { useSession } from "next-auth/react";

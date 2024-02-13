@@ -1,16 +1,21 @@
 import React from "react";
 import styles from "@/scss/components/button/button.module.scss";
-import Link from "next/link";
 
 interface ButtonProps {
-    text: string;
-    url: string;
+    text: React.ReactNode;
+    handleClick?: () => void;
+    variant?: "small" | "large";
+    title: string;
+    disabled?: boolean;
 }
 
-export const Button: React.FC<ButtonProps> = ({ text, url }) => {
+export const Button: React.FC<ButtonProps> = ({ text, handleClick, variant, title, disabled }) => {
+    // eslint-disable-next-line @typescript-eslint/strict-boolean-expressions
+    const classNames = `${variant ? styles[variant] : styles.container}`;
+
     return (
-        <Link href={url}>
-            <button className={styles.container}>{text}</button>
-        </Link>
+        <button className={classNames} onClick={handleClick} title={title} disabled={disabled}>
+            {text}
+        </button>
     );
 };

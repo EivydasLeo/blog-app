@@ -8,7 +8,7 @@ export const metadata = {
     description: "This is contact page",
 };
 
-const Contact = () => {
+const Contact: React.FC = () => {
     return (
         <div className={styles.container}>
             <h1 className={styles.title}>Let's Keep in Touch</h1>
@@ -25,7 +25,7 @@ const Contact = () => {
                         cols={30}
                         rows={10}
                     ></textarea>
-                    <Button text="Send" url="#" />
+                    <Button text="Send" title="Send" />
                 </form>
             </div>
         </div>

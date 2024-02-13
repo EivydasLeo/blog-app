@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "@/scss/app/books/books.module.scss";
 
-const Books = () => {
+const Books: React.FC = () => {
     return <div className={styles.container}>Books</div>;
 };
 

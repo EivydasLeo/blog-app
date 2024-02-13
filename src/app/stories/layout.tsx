@@ -1,14 +1,8 @@
-import React, { type ReactNode } from "react";
+import { type StoriesLayoutProps } from "@/utils/dummyData/props";
+import React from "react";
 
-interface StoriesLayoutProps {
-    children: ReactNode;
-}
-
-const StoriesLayout = ({ children }: StoriesLayoutProps) => {
-    return (
-        <>
-            <div>{children}</div>
-        </>
-    );
+const StoriesLayout = ({ children }: StoriesLayoutProps): React.JSX.Element => {
+    return <div>{children}</div>;
 };
+
 export default StoriesLayout;

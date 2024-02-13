@@ -3,6 +3,7 @@ import React from "react";
 import styles from "@/scss/components/navbar/navbar.module.scss";
 import { signOut, useSession } from "next-auth/react";
 import { Links } from "../Links/Links";
+import { Button } from "../Button/Button";
 
 export const Navbar: React.FC = () => {
     const { status } = useSession();
@@ -19,14 +20,14 @@ export const Navbar: React.FC = () => {
         <div className={styles.container}>
             <Links isAuthenticated={status === "authenticated"} />
             {status === "authenticated" && (
-                <button
-                    className={styles.logout}
-                    onClick={() => {
+                <Button
+                    text="Logout"
+                    title="Logout"
+                    variant="small"
+                    handleClick={() => {
                         void handleSignOut();
                     }}
-                >
-                    Logout
-                </button>
+                />
             )}
         </div>
     );

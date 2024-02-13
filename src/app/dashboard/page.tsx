@@ -4,13 +4,7 @@ import styles from "@/scss/app/dashboard/dashboard.module.scss";
 import useSWR from "swr";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
-import Image from "next/image";
-
-interface Post {
-    _id: string;
-    title: string;
-    image: string;
-}
+import Table from "@/components/Table/Table";
 
 const Dashboard: React.FC = () => {
     const session = useSession();
@@ -73,24 +67,16 @@ const Dashboard: React.FC = () => {
             {session.status === "authenticated" && (
                 <>
                     <div className={styles.posts}>
-                        {isLoading
-                            ? "loading"
-                            : data?.map((post: Post) => (
-                                  <div className={styles.post} key={post._id}>
-                                      <div className={styles.imgContainer}>
-                                          <Image src={post.image} alt="" width={200} height={100} />
-                                      </div>
-                                      <h2 className={styles.postTitle}>{post.title}</h2>
-                                      <span
-                                          className={styles.delete}
-                                          onClick={() => {
-                                              void handleDelete(post._id);
-                                          }}
-                                      >
-                                          X
-                                      </span>
-                                  </div>
-                              ))}
+                        {isLoading ? (
+                            "loading"
+                        ) : (
+                            <Table
+                                posts={data}
+                                onDelete={(e) => {
+                                    void handleDelete(e);
+                                }}
+                            />
+                        )}
                     </div>
                     <form
                         className={styles.new}

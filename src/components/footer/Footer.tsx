@@ -7,8 +7,10 @@ import { Copyright } from "../Copyright/Copyright";
 export const Footer: React.FC = () => {
     return (
         <div className={styles.container}>
-            <div className={styles.links}>
-                <Links isFooter isAuthenticated={false} />
+            <div className={styles.body}>
+                <div className={styles.links}>
+                    <Links isFooter isAuthenticated={false} />
+                </div>
                 <div className={styles.social}>
                     <SocialLinks />
                 </div>

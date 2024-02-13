@@ -8,14 +8,26 @@
     min-height: rem(100px);
 }
 
-.social {
+.body {
     display: flex;
     align-items: center;
-    flex-basis: 30%;
+    justify-content: space-between;
+    width: 80%;
 }
 
 .links {
     display: flex;
+    justify-content: center;
+    gap: rem(20px);
+    width: 100%;
+    font-size: $font-size-14;
+
+    a:hover {
+        color: $color-desaturated-red;
+    }
+}
+
+.social {
+    display: flex;
     align-items: center;
-    justify-content: space-between;
 }

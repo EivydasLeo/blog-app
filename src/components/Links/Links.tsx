@@ -2,7 +2,7 @@ import React from "react";
 import styles from "@/scss/components/links/links.module.scss";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { LogoData, linksData } from "@/utils/dummyData/data";
+import { LogoData, LinksData } from "@/utils/dummyData/data";
 import { type LinksProps } from "@/utils/dummyData/props";
 
 export const Links: React.FC<LinksProps> = ({ isFooter = false, isAuthenticated }) => {
@@ -12,8 +12,8 @@ export const Links: React.FC<LinksProps> = ({ isFooter = false, isAuthenticated 
     const handleLinkActive = (path: string): string => (path === pathname ? styles.active : "");
 
     const filteredLinks = isAuthenticated
-        ? linksData
-        : linksData.filter((link) => link.isHidden === undefined || !link.isHidden);
+        ? LinksData
+        : LinksData.filter((link) => link.isHidden === undefined || !link.isHidden);
 
     return (
         <>

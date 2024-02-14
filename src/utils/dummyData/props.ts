@@ -12,12 +12,12 @@ export interface ButtonLinkProps {
 
 export interface PostProps {
     _id: string;
-    title: string;
+    title?: string;
     image: string;
     createdAt: Date;
     username: string;
-    content: string;
-    desc: string;
+    content?: string;
+    desc?: string;
 }
 
 export interface TableProps {
@@ -27,4 +27,13 @@ export interface TableProps {
 
 export interface StoriesLayoutProps {
     children: ReactNode;
+}
+
+export interface TableHeaderProps {
+    headers: string[];
+}
+
+export interface TableBodyProps {
+    posts: PostProps[];
+    onDelete: (id: string) => void;
 }

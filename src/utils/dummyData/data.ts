@@ -1,4 +1,4 @@
-export const linksData = [
+export const LinksData = [
     {
         id: 1,
         title: "Home",
@@ -58,4 +58,27 @@ export const PersonData = {
     text: `Massa urna magnis dignissim id euismod porttitor vitae etiam viverra nunc at
     adipiscing sit morbi aliquet mauris porttitor nisi, senectus pharetra, ac porttitor
     orci`,
+};
+
+export const TableData = {
+    storiesData: [
+        {
+            username: "Username",
+            title: "Title",
+            content: "Content",
+            description: "Description",
+            image: "Image",
+            createdDate: "Created date",
+        },
+    ],
+    quotesData: [
+        {
+            username: "Quotes Username",
+            title: "Quotes Title",
+            content: "Quotes Content",
+            description: "Quotes Description",
+            image: "Quotes Image",
+            createdDate: "Quotes Created date",
+        },
+    ],
 };

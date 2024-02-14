@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const { Schema } = mongoose;
 
-const postSchema = new Schema(
+const storySchema = new Schema(
     {
         title: {
             type: String,
@@ -29,4 +29,4 @@ const postSchema = new Schema(
 );
 
 // eslint-disable-next-line @typescript-eslint/strict-boolean-expressions
-export default mongoose.models.Post || mongoose.model("Post", postSchema);
+export default mongoose.models.Story || mongoose.model("Story", storySchema);

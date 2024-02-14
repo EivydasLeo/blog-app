@@ -2,11 +2,12 @@ import React from "react";
 import styles from "@/scss/app/stories/id/storiesId.module.scss";
 import Image from "next/image";
 import { notFound } from "next/navigation";
+import { isUrl } from "@/utils/utils";
 
 export const dynamic = "force-dynamic";
 
 async function getData(id) {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/posts/${id}`, {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/stories/${id}`, {
         cache: "no-store",
     });
 
@@ -18,14 +19,14 @@ async function getData(id) {
 }
 
 export async function generateMetadata({ params }) {
-    const post = await getData(params.id);
+    const story = await getData(params.id);
     return {
-        title: post.title,
-        description: post.desc,
+        title: story.title,
+        description: story.desc,
     };
 }
 
-const BlogPost = async ({ params }) => {
+const StoryPost = async ({ params }) => {
     const data = await getData(params.id);
     return (
         <div className={styles.container}>
@@ -34,18 +35,32 @@ const BlogPost = async ({ params }) => {
                     <h1 className={styles.title}>{data.title}</h1>
                     <p className={styles.desc}>{data.desc}</p>
                     <div className={styles.author}>
+                        {data.image.length > 0 && isUrl(data.image) ? (
+                            <Image
+                                src={data.image}
+                                alt=""
+                                width={40}
+                                height={40}
+                                className={styles.avatar}
+                            />
+                        ) : (
+                            <span>No Image</span>
+                        )}
+                        <span className={styles.username}>{data.username}</span>
+                    </div>
+                </div>
+                <div className={styles.imageContainer}>
+                    {data.image.length > 0 && isUrl(data.image) ? (
                         <Image
                             src={data.image}
                             alt=""
                             width={40}
                             height={40}
-                            className={styles.avatar}
+                            className={styles.image}
                         />
-                        <span className={styles.username}>{data.username}</span>
-                    </div>
-                </div>
-                <div className={styles.imageContainer}>
-                    <Image src={data.image} alt="" fill={true} className={styles.image} />
+                    ) : (
+                        <span>No Image</span>
+                    )}
                 </div>
             </div>
             <div className={styles.content}>
@@ -55,4 +70,4 @@ const BlogPost = async ({ params }) => {
     );
 };
 
-export default BlogPost;
+export default StoryPost;

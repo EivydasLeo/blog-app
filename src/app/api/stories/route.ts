@@ -1,6 +1,6 @@
 import { type NextRequest, NextResponse } from "next/server";
 import { connect } from "@/utils/db";
-import Post from "@/models/Post";
+import Story from "@/models/Story";
 
 export const GET = async (request: NextRequest): Promise<NextResponse<string>> => {
     const url = new URL(request.url);
@@ -14,9 +14,9 @@ export const GET = async (request: NextRequest): Promise<NextResponse<string>> =
         if (username != null) {
             query = { username };
         }
-        const posts = await Post.find(query);
+        const stories = await Story.find(query);
 
-        return new NextResponse(JSON.stringify(posts), { status: 200 });
+        return new NextResponse(JSON.stringify(stories), { status: 200 });
     } catch (err) {
         return new NextResponse("Database Error", { status: 500 });
     }
@@ -25,12 +25,12 @@ export const GET = async (request: NextRequest): Promise<NextResponse<string>> =
 export const POST = async (request: NextRequest): Promise<NextResponse<string>> => {
     const body = await request.json();
 
-    const newPost = new Post(body);
+    const newStory = new Story(body);
 
     try {
         await connect();
 
-        await newPost.save();
+        await newStory.save();
 
         return new NextResponse("Post has been created", { status: 201 });
     } catch (err) {

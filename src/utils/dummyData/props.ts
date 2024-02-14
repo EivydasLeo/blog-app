@@ -10,7 +10,7 @@ export interface ButtonLinkProps {
     url: string;
 }
 
-export interface PostProps {
+export interface StoryProps {
     _id: string;
     title?: string;
     image: string;
@@ -21,7 +21,7 @@ export interface PostProps {
 }
 
 export interface TableProps {
-    posts: PostProps[];
+    stories: StoryProps[];
     onDelete: (id: string) => void;
 }
 
@@ -34,6 +34,6 @@ export interface TableHeaderProps {
 }
 
 export interface TableBodyProps {
-    posts: PostProps[];
+    stories: StoryProps[];
     onDelete: (id: string) => void;
 }

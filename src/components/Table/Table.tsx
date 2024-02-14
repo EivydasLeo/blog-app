@@ -7,10 +7,10 @@ import TableBody from "./TableBody";
 
 const storiesHeaders = Object.keys(TableData.storiesData[0]);
 
-const Table: React.FC<TableProps> = ({ posts, onDelete }) => (
+const Table: React.FC<TableProps> = ({ stories, onDelete }) => (
     <table className={styles.table}>
         <TableHeader headers={storiesHeaders} />
-        <TableBody posts={posts} onDelete={onDelete} />
+        <TableBody stories={stories} onDelete={onDelete} />
     </table>
 );
 

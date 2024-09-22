@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  align-items: center;
+  gap: rem(50px);
+}
+
+.logo {
+  font-family: initial;
+  font-weight: $font-weight-bold;
+  font-size: $font-size-40;
+  color: $color-desaturated-red;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: rem(20px);
+  @include text-navbar-links;
+}
+
+.link {
+  color: initial;
+
+  &:hover {
+    color: $color-desaturated-red;
+    transition: color 0.25s ease-in-out 0s;
+    will-change: color;
+  }
+}
+
+.active {
+  color: $color-desaturated-red;
+}

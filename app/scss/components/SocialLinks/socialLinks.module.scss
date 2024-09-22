@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  gap: rem(30px);
+}
+
+.link {
+  position: relative;
+  width: rem(20px);
+  height: rem(20px);
+}
+
+.icon:hover {
+  cursor: pointer;
+  filter: brightness(0%);
+}

@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import styles from "../../scss/components/Navbar/navbar.module.scss";
 import { Links } from "../Links/Links";

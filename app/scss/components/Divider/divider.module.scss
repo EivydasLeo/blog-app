@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  align-items: center;
+  width: rem(144px);
+  color: $color-desaturated-red;
+  font-size: $font-size-12;
+  font-weight: $font-weight-semi-bold;
+  text-transform: uppercase;
+  line-height: 1.3em;
+  letter-spacing: rem(2px);
+
+  &::before {
+    content: "";
+    display: block;
+    flex-grow: 1;
+    border-block-start: 1px solid $color-desaturated-red;
+    border-block-end: 0;
+    margin-right: rem(10px);
+  }
+}

@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: rem(20px);
+}
+
+.title,
+.subtitle {
+  font-family: $font-family-fraunces;
+}
+
+.subtitle {
+  font-weight: $font-weight-semi-bold;
+}
+
+.text {
+  color: $color-grayish-blue;
+  line-height: $line-height-26;
+}

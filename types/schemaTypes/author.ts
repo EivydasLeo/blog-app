@@ -1,41 +1,55 @@
-import {defineField, defineType} from 'sanity'
+import { defineField, defineType } from "sanity";
 
 export default defineType({
-  name: 'author',
-  title: 'Author',
-  type: 'document',
+  name: "author",
+  title: "Author",
+  type: "document",
   fields: [
     defineField({
-      name: 'name',
-      title: 'Name',
-      type: 'string',
+      name: "name",
+      title: "Name",
+      type: "string",
+      validation: (rule) => rule.required(),
     }),
     defineField({
-      name: 'slug',
-      title: 'Slug',
-      type: 'slug',
+      name: "slug",
+      title: "Slug",
+      type: "slug",
       options: {
-        source: 'name',
+        source: "name",
         maxLength: 96,
       },
     }),
     defineField({
-      name: 'image',
-      title: 'Image',
-      type: 'image',
-      options: {
-        hotspot: true,
-      },
+      name: "headline",
+      title: "Headline",
+      type: "string",
+      description: "In one short sentence, what do you do?",
+      validation: (rule) => rule.required(),
     }),
     defineField({
-      name: 'bio',
-      title: 'Bio',
-      type: 'array',
+      name: "profileImage",
+      title: "Profile Image",
+      type: "image",
+      description: "Upload a profile picture",
+      options: { hotspot: true },
+      fields: [
+        {
+          name: "alt",
+          title: "Alt",
+          type: "string",
+        },
+      ],
+    }),
+    defineField({
+      name: "bio",
+      title: "Bio",
+      type: "array",
       of: [
         {
-          title: 'Block',
-          type: 'block',
-          styles: [{title: 'Normal', value: 'normal'}],
+          title: "Block",
+          type: "block",
+          styles: [{ title: "Normal", value: "normal" }],
           lists: [],
         },
       ],
@@ -43,8 +57,8 @@ export default defineType({
   ],
   preview: {
     select: {
-      title: 'name',
-      media: 'image',
+      title: "name",
+      media: "image",
     },
   },
-})
+});

@@ -1,28 +1,38 @@
 import React from "react";
-import styles from "../scss/app/page.module.scss";
+import styles from "@/app/styles/page.module.scss";
 import Image from "next/image";
 import { ArticleCard } from "../components/ArticleCard/ArticleCard";
-import { PersonData } from "../utils/dummyData/data";
 import { Divider } from "../components/Divider/Divider";
 import { ButtonLink } from "../components/ButtonLink/ButtonLink";
+import { getAuthor } from "@/sanity/sanity.query";
+import type { AuthorType } from "@/types/types";
+import { PortableText } from "@portabletext/react";
 
-const Home: React.FC = (): React.ReactNode => {
-  const { title, subtitle, text } = PersonData;
+export default async function Home() {
+  const author: AuthorType[] = await getAuthor();
+
   return (
     <div className={styles.container}>
-      <div className={styles.item}>
-        <Divider text="Welcome" />
-        <ArticleCard title={title} subtitle={subtitle} text={text} />
-        <ButtonLink text="Join insider" url="/studio" />
-      </div>
-      <Image
-        src="/image/429684424_354750824134135_6874683522594106779_n.jpg"
-        alt="blogger"
-        width={550}
-        height={550}
-      />
+      {author &&
+        author.map((data) => (
+          <>
+            <div key={data._id} className={styles.item}>
+              <Divider text="Welcome" />
+              <ArticleCard title={data.name} subtitle={data.headline} />
+              <PortableText value={data.bio} />
+              <ButtonLink text="Join insider" url="/studio" />
+            </div>
+            <div>
+              <Image
+                className={styles.image}
+                src={data.profileImage.image}
+                alt={data.profileImage.alt}
+                width={500}
+                height={600}
+              />
+            </div>
+          </>
+        ))}
     </div>
   );
-};
-
-export default Home;
+}

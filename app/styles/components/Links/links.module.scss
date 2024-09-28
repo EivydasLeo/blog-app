@@ -19,8 +19,6 @@
 }
 
 .link {
-  color: initial;
-
   &:hover {
     color: $color-desaturated-red;
     transition: color 0.25s ease-in-out 0s;

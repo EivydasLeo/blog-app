@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import "./globals.scss";
+import { montserrat, fraunces } from "../fonts/font";
+import "@/app/styles/globals.scss";
 import { Navbar } from "../components/Navbar/Navbar";
 import { Footer } from "../components/Footer/Footer";
 import { ThemeProvider } from "../components/Theme/ThemeContext";
@@ -15,8 +16,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="reset">
-      <body className="headings">
+    <html lang="en">
+      <body className={`${montserrat.variable} ${fraunces.variable}`}>
         <ThemeProvider>
           <div className="container">
             <Navbar />

@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "@/app/scss/app/stories/stories.module.scss";
+import styles from "@/app/styles/stories/stories.module.scss";
 
 const Stories = () => {
   return (

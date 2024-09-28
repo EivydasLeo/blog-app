@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import styles from "/app/scss/components/links/links.module.scss";
+import styles from "@/app/styles/components/links/links.module.scss";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { LogoData, LinksData } from "../../utils/dummyData/data";

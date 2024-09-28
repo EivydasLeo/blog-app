@@ -14,7 +14,7 @@ body {
   min-height: 100%;
 }
 body {
-  font-family: $font-family-montserrat;
+  font-family: var(--font-montserrat);
 }
 
 a {
@@ -48,6 +48,19 @@ img {
 :-moz-placeholder {
   /* Firefox 18- */
   text-overflow: ellipsis;
+}
+
+$headings: h1 h2 h3;
+$font-size-base: 16px;
+
+$font-size-upper: 60px;
+$font-size-dec: 14px;
+
+@each $heading in $headings {
+  #{$heading} {
+    font-size: ($font-size-upper / $font-size-base) + rem;
+  }
+  $font-size-upper: $font-size-upper - $font-size-dec;
 }
 
 .theme {

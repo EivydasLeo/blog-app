@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../../scss/app/contact/contact.module.scss";
+import styles from "@/app/styles/contact/contact.module.scss";
 import Image from "next/image";
 import { Button } from "../../components/Button/Button";
 

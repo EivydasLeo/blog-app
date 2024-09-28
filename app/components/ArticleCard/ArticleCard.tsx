@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../../scss/components/ArticleCard/articleCard.module.scss";
+import styles from "@/app/styles/components/ArticleCard/articleCard.module.scss";
 
 interface ArticleCardProps {
   title?: string;

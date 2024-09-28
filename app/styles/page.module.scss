@@ -3,6 +3,7 @@
   align-items: center;
   gap: rem(100px);
   color: $color-black;
+  font-family: var(--font-montserrat);
 }
 
 .item {
@@ -10,4 +11,8 @@
   flex-direction: column;
   gap: rem(50px);
   width: 50%;
+}
+
+.image {
+  box-shadow: 0 0 15px 0px #180701;
 }

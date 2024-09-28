@@ -1,5 +1,5 @@
 import React, { type ReactNode } from "react";
-import styles from "@/app/scss/components/Theme/theme.module.scss";
+import styles from "@/app/styles/components/Theme/theme.module.scss";
 
 interface ThemeProviderProps {
   children: ReactNode;

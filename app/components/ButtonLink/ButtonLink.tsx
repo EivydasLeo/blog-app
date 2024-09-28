@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../../scss/components/ButtonLink/buttonLink.module.scss";
+import styles from "@/app/styles/components/ButtonLink/buttonLink.module.scss";
 import Link from "next/link";
 import { type ButtonLinkProps } from "../../utils/dummyData/props";
 

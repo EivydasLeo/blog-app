@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../../scss/components/Copyright/copyright.module.scss";
+import styles from "@/app/styles/components/Copyright/copyright.module.scss";
 import { CopyrightData } from "../../utils/dummyData/data";
 
 export const Copyright: React.FC = () => {

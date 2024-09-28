@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../../scss/components/Divider/divider.module.scss";
+import styles from "@/app/styles/components/Divider/divider.module.scss";
 
 interface DividerProps {
   text?: string;

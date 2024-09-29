@@ -10,3 +10,20 @@ export type AuthorType = {
   };
   bio: PortableTextBlock[];
 };
+
+export type PhotoType = {
+  _id: string;
+  title: string;
+  alt: string;
+  image: {
+    asset: {
+      _id: string;
+      url: string;
+    };
+  };
+};
+
+export type SlideType = {
+  _id: string;
+  slide: PhotoType[];
+};

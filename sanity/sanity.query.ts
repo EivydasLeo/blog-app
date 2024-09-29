@@ -12,3 +12,40 @@ export async function getAuthor() {
     }`
   );
 }
+
+export async function getPhoto() {
+  return client.fetch(
+    groq`*[_type == "photo"]{
+      _id,
+      _createdAt,
+      _updatedAt,
+      title,
+      alt,
+      image {
+        asset -> {
+          _id,
+          url
+        }
+      }
+    }`
+  );
+}
+
+export async function getSlide() {
+  return client.fetch(
+    groq`*[_type == "slides"] {
+      _id,
+      slide[]-> { 
+        _id,
+        title,
+        alt,
+        image {
+          asset -> {
+            _id,
+            url
+          }
+        }
+      }
+    }`
+  );
+}

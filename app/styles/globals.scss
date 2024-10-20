@@ -76,3 +76,11 @@ $font-size-dec: 14px;
   flex-direction: column;
   justify-content: space-between;
 }
+
+.swiper-pagination-bullet {
+  background-color: $color-white-smoke !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: $color-desaturated-red !important;
+}

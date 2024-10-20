@@ -21,27 +21,6 @@ export default defineType({
       },
     }),
     defineField({
-      name: "headline",
-      title: "Headline",
-      type: "string",
-      description: "In one short sentence, what do you do?",
-      validation: (rule) => rule.required(),
-    }),
-    defineField({
-      name: "profileImage",
-      title: "Profile Image",
-      type: "image",
-      description: "Upload a profile picture",
-      options: { hotspot: true },
-      fields: [
-        {
-          name: "alt",
-          title: "Alt",
-          type: "string",
-        },
-      ],
-    }),
-    defineField({
       name: "bio",
       title: "Bio",
       type: "array",
@@ -51,6 +30,63 @@ export default defineType({
           type: "block",
           styles: [{ title: "Normal", value: "normal" }],
           lists: [],
+        },
+      ],
+    }),
+    defineField({
+      name: "writing",
+      title: "Writing",
+      type: "array",
+      of: [
+        {
+          title: "Block",
+          type: "block",
+          styles: [{ title: "Normal", value: "normal" }],
+          lists: [],
+        },
+      ],
+    }),
+    defineField({
+      name: "books",
+      title: "Books Links",
+      type: "array",
+      of: [
+        {
+          type: "object",
+          fields: [
+            {
+              name: "title",
+              title: "Website title",
+              type: "string",
+            },
+            {
+              name: "link",
+              title: "Website address",
+              type: "url",
+            },
+          ],
+        },
+      ],
+    }),
+    defineField({
+      name: "articles",
+      title: "Articles Links",
+      type: "array",
+      of: [
+        {
+          type: "object",
+          fields: [
+            {
+              name: "title",
+              title: "Website title",
+              type: "string",
+            },
+            {
+              name: "link",
+              title: "Website address",
+              type: "url",
+            },
+          ],
         },
       ],
     }),

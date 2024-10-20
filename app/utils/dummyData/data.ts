@@ -49,8 +49,8 @@ export const SocialLinksData = [
 ];
 
 export const CopyrightData = {
-  copyrightDate: `© ${new Date().getFullYear()} Food Blogger & Influencer`,
-  copyrightText: "Powered by Food Blogger & Influencer",
+  copyrightDate: `© ${new Date().getFullYear()} Writer & Author`,
+  copyrightText: "Powered by Writer & Author",
 };
 
 export const PersonData = {

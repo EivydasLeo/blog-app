@@ -1,4 +1,5 @@
 import { PortableTextBlock } from "sanity";
+import { Url } from "url";
 
 export type AuthorType = {
   _id: string;
@@ -25,5 +26,43 @@ export type PhotoType = {
 
 export type SlideType = {
   _id: string;
-  slide: PhotoType[];
+  slides: PhotoType[];
+};
+
+export type AboutType = {
+  _id: string;
+  name: string;
+  headline: string;
+  bio: PortableTextBlock[];
+  writing: PortableTextBlock[];
+  books: [
+    {
+      _key: string;
+      title: string;
+      link: Url;
+    },
+  ];
+  articles: [
+    {
+      _key: string;
+      title: string;
+      link: Url;
+    },
+  ];
+};
+
+export type StorieType = {
+  _id: string;
+  title: string;
+  storie: PortableTextBlock[];
+};
+
+export type BookType = {
+  _id: string;
+  bookImage: {
+    alt: string;
+    image: string;
+  };
+  description: PortableTextBlock[];
+  link: string;
 };

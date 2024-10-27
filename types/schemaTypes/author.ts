@@ -8,25 +8,28 @@ export default defineType({
     defineField({
       name: "name",
       title: "Name",
-      type: "string",
+      type: "localeString",
       validation: (rule) => rule.required(),
     }),
+
     defineField({
       name: "slug",
       title: "Slug",
       type: "slug",
       options: {
-        source: "name",
+        source: "name.en",
         maxLength: 96,
       },
     }),
+
     defineField({
       name: "headline",
       title: "Headline",
-      type: "string",
+      type: "localeString",
       description: "In one short sentence, what do you do?",
       validation: (rule) => rule.required(),
     }),
+
     defineField({
       name: "profileImage",
       title: "Profile Image",
@@ -34,31 +37,24 @@ export default defineType({
       description: "Upload a profile picture",
       options: { hotspot: true },
       fields: [
-        {
+        defineField({
           name: "alt",
-          title: "Alt",
-          type: "string",
-        },
+          title: "Alt Text",
+          type: "localeString",
+        }),
       ],
     }),
     defineField({
       name: "bio",
       title: "Bio",
-      type: "array",
-      of: [
-        {
-          title: "Block",
-          type: "block",
-          styles: [{ title: "Normal", value: "normal" }],
-          lists: [],
-        },
-      ],
+      type: "localeBlockContent",
     }),
   ],
+
   preview: {
     select: {
-      title: "name",
-      media: "image",
+      title: "name.en",
+      media: "profileImage",
     },
   },
 });

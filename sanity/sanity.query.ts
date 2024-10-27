@@ -1,15 +1,19 @@
 import { groq } from "next-sanity";
 import client from "./sanity.client";
 
-export async function getAuthor() {
+export async function getAuthor(locale: string) {
   return client.fetch(
     groq`*[_type == "author"]{
       _id,
-      name,
-      headline,
-      profileImage {alt, "image": asset->url},
-      bio
-    }`
+      "name": name[$locale],
+      "headline": headline[$locale],
+      "profileImage": {
+        "image": profileImage.asset->url,
+        "alt": profileImage.alt[$locale],
+      },
+      "bio": bio[$locale],
+    }`,
+    { locale }
   );
 }
 

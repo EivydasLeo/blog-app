@@ -9,8 +9,8 @@ const nextConfig = {
   sassOptions: {
     includePaths: [path.join(__dirname, "styles")],
     prependData: `
-        @import "/app/styles/variables/variables.scss";
-      `,
+      @import "app/styles/variables/variables.scss";
+    `,
   },
   images: {
     remotePatterns: [
@@ -20,6 +20,10 @@ const nextConfig = {
         port: "",
       },
     ],
+  },
+  i18n: {
+    locales: ["en", "lt"],
+    defaultLocale: "en",
   },
 };
 

@@ -1,3 +1,7 @@
+import createNextIntlPlugin from "next-intl/plugin";
+
+const withNextIntl = createNextIntlPlugin("./i18n/requets.ts");
+
 import path from "path";
 import { fileURLToPath } from "url";
 
@@ -21,10 +25,6 @@ const nextConfig = {
       },
     ],
   },
-  i18n: {
-    locales: ["en", "lt"],
-    defaultLocale: "en",
-  },
 };
 
-export default nextConfig;
+export default withNextIntl(nextConfig);

@@ -1,15 +1,17 @@
 import React from "react";
+import { getTranslations } from "next-intl/server";
 import styles from "@/app/styles/page.module.scss";
 import Image from "next/image";
-import { ArticleCard } from "../components/ArticleCard/ArticleCard";
-import { Divider } from "../components/Divider/Divider";
-import { ButtonLink } from "../components/ButtonLink/ButtonLink";
+import { ArticleCard } from "../../components/ArticleCard/ArticleCard";
+import { Divider } from "../../components/Divider/Divider";
 import { getAuthor } from "@/sanity/sanity.query";
 import type { AuthorType } from "@/types/types";
 import { PortableText } from "@portabletext/react";
 
-export default async function Home() {
-  const author: AuthorType[] = await getAuthor();
+export default async function Home({ params }: { params: { locale: string } }) {
+  const { locale } = params;
+  const author: AuthorType[] = await getAuthor(locale);
+  const t = await getTranslations("HomePage");
 
   return (
     <div className={styles.container}>
@@ -17,10 +19,9 @@ export default async function Home() {
         author.map((data) => (
           <>
             <div key={data._id} className={styles.item}>
-              <Divider text="Welcome" />
+              <Divider text={t("divider")} />
               <ArticleCard title={data.name} subtitle={data.headline} />
               <PortableText value={data.bio} />
-              <ButtonLink text="Join insider" url="/studio" />
             </div>
             <div>
               <Image

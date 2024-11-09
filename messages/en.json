@@ -1,0 +1,13 @@
+{
+  "HomePage": {
+    "divider": "WELCOME",
+    "title": "Hello world!",
+    "navigation": {
+      "/": "Home",
+      "about": "The Author",
+      "stories": "Short Stories",
+      "books": "Books",
+      "contact": "Contact"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "HomePage": {
+    "divider": "Sveiki atvykę",
+    "title": "Sveikas Pasauli!",
+    "navigation": {
+      "/": "Pagrindinis",
+      "about": "Autorius",
+      "stories": "Novelės",
+      "books": "Knygos",
+      "contact": "Kontaktai"
+    }
+  }
+}

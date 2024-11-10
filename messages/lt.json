@@ -15,5 +15,9 @@
   },
   "StoriesPage": {
     "divider": "Novelės"
+  },
+  "BooksPage": {
+    "divider": "Knygos",
+    "linkTitle": "Leidyklos tinklalapis"
   }
 }

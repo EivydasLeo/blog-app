@@ -22,15 +22,7 @@ export default defineType({
     defineField({
       name: "description",
       title: "Description",
-      type: "array",
-      of: [
-        {
-          title: "Block",
-          type: "block",
-          styles: [{ title: "Normal", value: "normal" }],
-          lists: [],
-        },
-      ],
+      type: "localeBlockContent",
     }),
     defineField({
       name: "link",

@@ -6,13 +6,20 @@ import { PortableText } from "@portabletext/react";
 import { Divider } from "@/app/components/Divider/Divider";
 import Image from "next/image";
 import Link from "next/link";
+import { getTranslations } from "next-intl/server";
 
-export default async function Books() {
-  const book: BookType[] = await getBook();
+export default async function Books({
+  params,
+}: {
+  params: { locale: string };
+}) {
+  const { locale } = params;
+  const book: BookType[] = await getBook(locale);
+  const t = await getTranslations("BooksPage");
 
   return (
     <div className={styles.container}>
-      <Divider text="Books" />
+      <Divider text={t("divider")} />
       {book &&
         book.map((data) => (
           <div key={data._id} className={styles.item}>
@@ -24,7 +31,7 @@ export default async function Books() {
             />
             <div className={styles.description}>
               <PortableText value={data.description} />
-              <Link href={data.link}>Publishers website</Link>
+              <Link href={data.link}>{t("linkTitle")}</Link>
             </div>
           </div>
         ))}

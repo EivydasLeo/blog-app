@@ -15,5 +15,9 @@
   },
   "StoriesPage": {
     "divider": "Short Stories"
+  },
+  "BooksPage": {
+    "divider": "Books",
+    "linkTitle": "Publishers website"
   }
 }

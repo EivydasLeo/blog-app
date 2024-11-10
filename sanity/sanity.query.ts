@@ -80,13 +80,14 @@ export async function getStorie(locale: string) {
   );
 }
 
-export async function getBook() {
+export async function getBook(locale: string) {
   return client.fetch(
     groq`*[_type == "books"]{
       _id,
       bookImage {alt, "image": asset->url},
-      description,
+      "description": description[$locale],
       link
-    }`
+    }`,
+    { locale }
   );
 }

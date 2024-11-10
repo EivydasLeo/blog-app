@@ -37,11 +37,11 @@ export default async function RootLayout({
       >
         <NextIntlClientProvider messages={messages}>
           <ThemeProvider>
-            <div className="container">
+            <main className="container">
               <Navbar />
               {children}
               <Footer />
-            </div>
+            </main>
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>

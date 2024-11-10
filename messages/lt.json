@@ -3,11 +3,14 @@
     "divider": "Sveiki atvykę",
     "title": "Sveikas Pasauli!",
     "navigation": {
-      "/": "Pagrindinis",
-      "about": "Autorius",
+      "": "Pagrindinis",
+      "about": "Autorė",
       "stories": "Novelės",
       "books": "Knygos",
       "contact": "Kontaktai"
     }
+  },
+  "AboutPage": {
+    "divider": "Apie Autorę"
   }
 }

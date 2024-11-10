@@ -3,11 +3,14 @@
     "divider": "WELCOME",
     "title": "Hello world!",
     "navigation": {
-      "/": "Home",
+      "": "Home",
       "about": "The Author",
       "stories": "Short Stories",
       "books": "Books",
       "contact": "Contact"
     }
+  },
+  "AboutPage": {
+    "divider": "About Author"
   }
 }

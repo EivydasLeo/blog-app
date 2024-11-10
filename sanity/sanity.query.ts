@@ -54,17 +54,18 @@ export async function getSlide() {
   );
 }
 
-export async function getAbout() {
+export async function getAbout(locale: string) {
   return client.fetch(
     groq`*[_type == "about"]{
       _id,
-      name,
-      headline,
-      bio,
-      writing,
+      "name": name[$locale],
+      "headline": headline[$locale],
+      "bio": bio[$locale],
+      "writing": writing[$locale],
       books,
       articles
-    }`
+    }`,
+    { locale }
   );
 }
 

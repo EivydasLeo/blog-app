@@ -8,15 +8,22 @@ import { getAbout } from "@/sanity/sanity.query";
 import type { AboutType } from "@/types/types";
 import { PortableText } from "@portabletext/react";
 import Link from "next/link";
+import { getTranslations } from "next-intl/server";
 
-export default async function About() {
+export default async function About({
+  params,
+}: {
+  params: { locale: string };
+}) {
+  const { locale } = params;
+  const about: AboutType[] = await getAbout(locale);
   const slides: SlideType[] = await getSlide();
-  const about: AboutType[] = await getAbout();
+  const t = await getTranslations("AboutPage");
 
   return (
     <div className={styles.container}>
       <div className={styles.item}>
-        <Divider text="About Author" />
+        <Divider text={t("divider")} />
         {about &&
           about.map((data) => (
             <div key={data._id} className={styles.bio}>

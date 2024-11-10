@@ -8,7 +8,7 @@ export default defineType({
     defineField({
       name: "name",
       title: "Name",
-      type: "string",
+      type: "localeString",
       validation: (rule) => rule.required(),
     }),
     defineField({
@@ -23,28 +23,12 @@ export default defineType({
     defineField({
       name: "bio",
       title: "Bio",
-      type: "array",
-      of: [
-        {
-          title: "Block",
-          type: "block",
-          styles: [{ title: "Normal", value: "normal" }],
-          lists: [],
-        },
-      ],
+      type: "localeBlockContent",
     }),
     defineField({
       name: "writing",
       title: "Writing",
-      type: "array",
-      of: [
-        {
-          title: "Block",
-          type: "block",
-          styles: [{ title: "Normal", value: "normal" }],
-          lists: [],
-        },
-      ],
+      type: "localeBlockContent",
     }),
     defineField({
       name: "books",

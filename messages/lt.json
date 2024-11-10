@@ -12,5 +12,8 @@
   },
   "AboutPage": {
     "divider": "Apie Autorę"
+  },
+  "StoriesPage": {
+    "divider": "Novelės"
   }
 }

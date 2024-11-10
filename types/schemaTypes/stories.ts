@@ -8,21 +8,13 @@ export default defineType({
     defineField({
       name: "title",
       title: "Title",
-      type: "string",
+      type: "localeString",
       validation: (rule) => rule.required(),
     }),
     defineField({
       name: "storie",
       title: "Storie",
-      type: "array",
-      of: [
-        {
-          title: "Block",
-          type: "block",
-          styles: [{ title: "Normal", value: "normal" }],
-          lists: [],
-        },
-      ],
+      type: "localeBlockContent",
     }),
   ],
 });

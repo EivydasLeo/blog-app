@@ -4,13 +4,20 @@ import { getStorie } from "@/sanity/sanity.query";
 import type { StorieType } from "@/types/types";
 import { PortableText } from "@portabletext/react";
 import { Divider } from "@/app/components/Divider/Divider";
+import { getTranslations } from "next-intl/server";
 
-export default async function Stories() {
-  const storie: StorieType[] = await getStorie();
+export default async function Stories({
+  params,
+}: {
+  params: { locale: string };
+}) {
+  const { locale } = params;
+  const storie: StorieType[] = await getStorie(locale);
+  const t = await getTranslations("StoriesPage");
 
   return (
     <div className={styles.container}>
-      <Divider text="Short Stories" />
+      <Divider text={t("divider")} />
       {storie &&
         storie.map((data) => (
           <div key={data._id} className={styles.item}>

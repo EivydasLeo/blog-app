@@ -12,5 +12,8 @@
   },
   "AboutPage": {
     "divider": "About Author"
+  },
+  "StoriesPage": {
+    "divider": "Short Stories"
   }
 }

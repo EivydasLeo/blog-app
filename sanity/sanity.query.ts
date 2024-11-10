@@ -69,13 +69,14 @@ export async function getAbout(locale: string) {
   );
 }
 
-export async function getStorie() {
+export async function getStorie(locale: string) {
   return client.fetch(
     groq`*[_type == "stories"]{
       _id,
-      title,
-      storie
-    }`
+      "title": title[$locale],
+      "storie": storie[$locale],
+    }`,
+    { locale }
   );
 }
 

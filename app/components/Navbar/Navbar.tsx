@@ -1,11 +1,11 @@
 import React from "react";
 import styles from "@/app/styles/components/Navbar/navbar.module.scss";
-import { Links } from "../Links/Links";
+import { NavigationLinks } from "../NavigationLinks/NavigationLinks";
 
 export const Navbar: React.FC = () => {
   return (
-    <div className={styles.container}>
-      <Links />
-    </div>
+    <nav className={styles.container}>
+      <NavigationLinks />
+    </nav>
   );
 };

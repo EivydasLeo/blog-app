@@ -3,11 +3,10 @@ import styles from "@/app/styles/components/Copyright/copyright.module.scss";
 import { CopyrightData } from "../../utils/dummyData/data";
 
 export const Copyright: React.FC = () => {
-  const { copyrightDate, copyrightText } = CopyrightData;
+  const { copyright } = CopyrightData;
   return (
     <div className={styles.container}>
-      <span className={styles.text}>{copyrightDate}</span>
-      <span className={styles.text}>{copyrightText}</span>
+      <span className={styles.text}>{copyright}</span>
     </div>
   );
 };

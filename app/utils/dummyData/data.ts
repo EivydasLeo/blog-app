@@ -21,6 +21,5 @@ export const SocialLinksData = [
 ];
 
 export const CopyrightData = {
-  copyrightDate: `© ${new Date().getFullYear()} Writer & Author`,
-  copyrightText: "Powered by Writer & Author",
+  copyright: `© ${new Date().getFullYear()} Greta Ska. All rights reserved.`,
 };

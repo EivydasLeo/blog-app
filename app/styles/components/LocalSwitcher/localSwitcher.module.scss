@@ -1,0 +1,28 @@
+.label {
+  padding: rem(15px);
+}
+
+.select {
+  border: 1px solid $color-black;
+  border-radius: 5px;
+  width: rem(50px);
+  height: rem(25px);
+  background-color: inherit;
+  font-weight: 600;
+  font-family: var(--font-montserrat);
+
+  &:hover {
+    border: 1px solid $color-desaturated-red;
+    cursor: pointer;
+    color: $color-desaturated-red;
+  }
+
+  & > option {
+    color: $color-black;
+  }
+
+  &:focus-visible {
+    outline: none;
+    box-shadow: none;
+  }
+}

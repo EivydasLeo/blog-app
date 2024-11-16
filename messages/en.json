@@ -19,5 +19,9 @@
   "BooksPage": {
     "divider": "Books",
     "linkTitle": "Publishers website"
+  },
+  "NotFoundPage": {
+    "404": "Page not found",
+    "link": "Go to homepage"
   }
 }

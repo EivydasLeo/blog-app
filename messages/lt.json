@@ -19,5 +19,9 @@
   "BooksPage": {
     "divider": "Knygos",
     "linkTitle": "Leidyklos tinklalapis"
+  },
+  "NotFoundPage": {
+    "404": "Puslapis nerastas",
+    "link": "Eiti į pagrindinį puslapį"
   }
 }

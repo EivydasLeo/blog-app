@@ -13,8 +13,10 @@ export const NavigationLinks: React.FC<LinksProps> = ({ isFooter = false }) => {
   const t = useTranslations("HomePage");
   const navigationKeys = Object.keys(t.raw("navigation"));
 
-  const handleLinkActive = (path: string) =>
-    pathname.startsWith(path) ? styles.active : "";
+  const handleLinkActive = (path: string) => {
+    const currentPath = pathname.split("/")[2] || "";
+    return currentPath === path ? styles.active : "";
+  };
 
   return (
     <>

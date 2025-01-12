@@ -23,5 +23,8 @@
   "NotFoundPage": {
     "404": "Page not found",
     "link": "Go to homepage"
+  },
+  "CopyrightPage": {
+    "copyright": "Greta Ska. All rights reserved."
   }
 }

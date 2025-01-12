@@ -23,5 +23,8 @@
   "NotFoundPage": {
     "404": "Puslapis nerastas",
     "link": "Eiti į pagrindinį puslapį"
+  },
+  "CopyrightPage": {
+    "copyright": "Greta Ska. Visos teisės saugomos."
   }
 }

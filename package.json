@@ -14,20 +14,28 @@
   },
   "dependencies": {
     "@portabletext/react": "^3.1.0",
+    "@radix-ui/react-label": "^2.1.1",
+    "@radix-ui/react-slot": "^1.1.1",
     "@sanity/language-filter": "^4.0.2",
     "@sanity/vision": "^3.57.3",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.469.0",
     "next": "14.2.11",
     "next-intl": "^3.23.5",
     "next-sanity": "^9.4.7",
     "react": "^18",
     "react-dom": "^18",
     "sanity": "^3.57.3",
-    "swiper": "^11.1.14"
+    "swiper": "^11.1.14",
+    "tailwind-merge": "^2.6.0",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "autoprefixer": "^10.4.20",
     "eslint": "^8",
     "eslint-config-next": "14.2.11",
     "eslint-config-prettier": "^9.0.0",
@@ -35,8 +43,10 @@
     "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "postcss": "^8.4.49",
     "prettier": "^3.0.3",
     "sass": "^1.78.0",
+    "tailwindcss": "^3.4.17",
     "typescript": "^5"
   }
 }

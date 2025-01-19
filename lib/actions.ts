@@ -2,6 +2,10 @@
 
 import { contactFormSchema } from "@/lib/schema";
 import { z } from "zod";
+import { Resend } from "resend";
+import { EmailTemplate } from "@/app/components/ui/email-template";
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function contactFormAction(
   _prevState: unknown,
@@ -12,15 +16,40 @@ export async function contactFormAction(
   try {
     const data = contactFormSchema.parse(defaultValues);
 
-    // This simulates a slow response like a form submission.
-    // Replace this with your actual form submission logic.
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    try {
+      const { data: emailData, error } = await resend.emails.send({
+        from: `Greta <${process.env.RESEND_FROM_EMAIL}>`,
+        to: [data.email],
+        subject: "Welcome",
+        react: EmailTemplate({ firstName: data.firstName }),
+      });
 
-    console.log(data);
+      await resend.emails.send({
+        from: `Greta <${process.env.RESEND_FROM_EMAIL}>`,
+        to: `${process.env.RESEND_ADMIN_EMAIL}`,
+        subject: `New message from ${data.firstName} ${data.lastName}`,
+        html: `
+          <p><strong>Name:</strong> ${data.firstName} ${data.lastName}</p>
+          <p><strong>Email:</strong> ${data.email}</p>
+          <p><strong>Message:</strong> ${data.message}</p>
+        `,
+      });
+
+      if (error) {
+        console.error("Error sending email:", error);
+        throw new Error("Failed to send email");
+      }
+
+      console.log("Email sent successfully:", emailData);
+    } catch (emailError) {
+      console.error("Error sending email:", emailError);
+      throw new Error("Failed to send email");
+    }
 
     return {
       defaultValues: {
-        name: "",
+        firstName: "",
+        lastName: "",
         email: "",
         message: "",
       },
@@ -44,7 +73,9 @@ export async function contactFormAction(
     return {
       defaultValues,
       success: false,
-      errors: null,
+      errors: {
+        form: "An unexpected error occurred. Please try again later.",
+      },
     };
   }
 }

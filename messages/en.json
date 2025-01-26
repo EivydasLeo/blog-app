@@ -26,5 +26,29 @@
   },
   "CopyrightPage": {
     "copyright": "Greta Ska. All rights reserved."
+  },
+  "ContactPage": {
+    "divider": "Contact",
+    "cardTitle": "Connect with the Author",
+    "cardDescription": "Have thoughts on my stories or questions about my writing journey?I’d love to hear from you—let’s start a conversation!",
+    "messageSent": "Your message has been sent. Thank you.",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "firstNamePlaceholder": "Type your first name here",
+    "lastNamePlaceholder": "Type your last name here",
+    "email": "Email",
+    "emailPlaceholder": "Type your email here",
+    "message": "Message",
+    "messagePlaceholder": "Type your message here",
+    "sending": "Sending",
+    "sendMessage": "Send Message",
+    "firstNameMin": "First name must be at least 2 characters.",
+    "firstNameMax": "First name must be at most 32 characters.",
+    "lastNameMin": "Last name must be at least 2 characters.",
+    "lastNameMax": "Last name must be at most 32 characters.",
+    "emailInvalid": "Please enter a valid email address.",
+    "messageMin": "Message must be at least 2 characters.",
+    "messageMax": "Message must be at most 1000 characters.",
+    "unexpectedError": "An unexpected error occurred. Please try again later."
   }
 }

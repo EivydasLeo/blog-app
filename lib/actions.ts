@@ -4,6 +4,7 @@ import { contactFormSchema } from "@/lib/schema";
 import { z } from "zod";
 import { Resend } from "resend";
 import { EmailTemplate } from "@/app/components/ui/email-template";
+import { getTranslations } from "next-intl/server";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -12,9 +13,11 @@ export async function contactFormAction(
   formData: FormData
 ) {
   const defaultValues = Object.fromEntries(formData.entries());
+  const t = await getTranslations("ContactPage");
+  const schema = contactFormSchema(t);
 
   try {
-    const data = contactFormSchema.parse(defaultValues);
+    const data = schema.parse(defaultValues);
 
     try {
       const { data: emailData, error } = await resend.emails.send({

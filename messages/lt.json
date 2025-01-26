@@ -26,5 +26,29 @@
   },
   "CopyrightPage": {
     "copyright": "Greta Ska. Visos teisės saugomos."
+  },
+  "ContactPage": {
+    "divider": "Kontaktai",
+    "cardTitle": "Susisiekite su Autorę",
+    "cardDescription": "Turite minčių apie mano istorijas ar klausimų apie mano rašymo kelionę? Norėčiau išgirsti jūsų nuomonę – pradėkime pokalbį!",
+    "messageSent": "Jūsų žinutė buvo išsiųsta. Ačiū.",
+    "firstName": "Vardas",
+    "lastName": "Pavardė",
+    "firstNamePlaceholder": "Įveskite savo vardą čia",
+    "lastNamePlaceholder": "Įveskite savo pavardę čia",
+    "email": "El.paštas",
+    "emailPlaceholder": "Įveskite savo el.paštą čia",
+    "message": "Žinutė",
+    "messagePlaceholder": "Įveskite savo žinutę čia",
+    "sending": "Siunčiama",
+    "sendMessage": "Išsiųsti žinutę",
+    "firstNameMin": "Vardas turi būti sudarytas bent iš 2 simbolių.",
+    "firstNameMax": "Vardas gali būti sudarytas iš daugiausiai 32 simbolių.",
+    "lastNameMin": "Pavardė turi būti sudaryta bent iš 2 simbolių.",
+    "lastNameMax": "Pavardė gali būti sudaryta iš daugiausiai 32 simbolių.",
+    "emailInvalid": "Įveskite galiojantį el. pašto adresą.",
+    "messageMin": "Žinutė turi būti sudaryta bent iš 2 simbolių.",
+    "messageMax": "Žinutė gali būti sudaryta iš daugiausiai 1000 simbolių.",
+    "unexpectedError": "Įvyko nenumatyta klaida. Bandykite dar kartą vėliau."
   }
 }

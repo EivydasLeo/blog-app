@@ -1,17 +1,19 @@
 import { z } from "zod";
 
-export const contactFormSchema = z.object({
-  firstName: z
-    .string()
-    .min(2, { message: "Name must be at least 2 characters" })
-    .max(32, { message: "Name must be at most 32 characters" }),
-  lastName: z
-    .string()
-    .min(2, { message: "Name must be at least 2 characters" })
-    .max(32, { message: "Name must be at most 32 characters" }),
-  email: z.string().email({ message: "Invalid email address" }),
-  message: z
-    .string()
-    .min(2, { message: "Message must be at least 2 characters" })
-    .max(1000, { message: "Message must be at most 1000 characters" }),
-});
+export const contactFormSchema = (t: (key: string) => string) => {
+  return z.object({
+    firstName: z
+      .string()
+      .min(2, { message: t("firstNameMin") })
+      .max(32, { message: t("firstNameMax") }),
+    lastName: z
+      .string()
+      .min(2, { message: t("lastNameMin") })
+      .max(32, { message: t("lastNameMax") }),
+    email: z.string().email({ message: t("emailInvalid") }),
+    message: z
+      .string()
+      .min(2, { message: t("messageMin") })
+      .max(1000, { message: t("messageMax") }),
+  });
+};

@@ -5,7 +5,7 @@
   max-width: fit-content;
 
   & > :first-child {
-    height: rem(90px);
+    margin-bottom: rem(50px);
   }
 }
 
@@ -13,6 +13,7 @@
   display: flex;
   gap: rem(30px);
   max-width: rem(900px);
+  margin-bottom: rem(100px);
 }
 
 .description {

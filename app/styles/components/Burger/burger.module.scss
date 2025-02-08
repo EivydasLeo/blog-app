@@ -1,17 +1,21 @@
 .container {
   display: flex;
-  align-items: center;
-  gap: rem(20px);
+  flex-direction: column;
+  gap: rem(10px);
+}
 
-  @include touch {
-    display: none;
-  }
+.logo {
+  font-family: initial;
+  font-weight: $font-weight-bold;
+  font-size: $font-size-36;
+  color: $color-desaturated-red;
 }
 
 .links {
   display: flex;
   align-items: center;
   @include text-navbar-links;
+  font-size: $font-size-16;
 }
 
 .link {

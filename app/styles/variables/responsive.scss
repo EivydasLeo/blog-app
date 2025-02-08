@@ -1,83 +1,88 @@
-$breaking-point-mobile: 375px;
-$breaking-point-tablet: 768px;
-$breaking-point-desktop: 1024px;
-$breaking-point-widescreen: 1440px;
-$breaking-point-fullhd: 1920px;
+$breakpoints: (
+  "mobile": 320px,
+  "tablet": 768px,
+  "desktop": 1024px,
+  "widescreen": 1440px,
+  "fullhd": 1820px,
+);
 
-@mixin respond-to($min-width, $max-width: null) {
-  @if $max-width {
-    @media screen and (min-width: $min-width) and (max-width: ($max-width - 1px)) {
+@mixin respond-to($from, $to: null) {
+  $min: map-get($breakpoints, $from);
+  $max: if($to, map-get($breakpoints, $to) - 1px, null);
+
+  @if $max {
+    @media (min-width: $min) and (max-width: $max) {
       @content;
     }
   } @else {
-    @media screen and (min-width: $min-width) {
+    @media (min-width: $min) {
       @content;
     }
   }
 }
 
 @mixin mobile {
-  @include respond-to(0, $breaking-point-tablet - 1px) {
+  @include respond-to("mobile", "tablet") {
     @content;
   }
 }
 
 @mixin tablet {
-  @include respond-to($breaking-point-tablet, $breaking-point-desktop - 1px) {
+  @include respond-to("tablet", "desktop") {
     @content;
   }
 }
 
 @mixin desktop {
-  @include respond-to($breaking-point-desktop, $breaking-point-widescreen - 1px) {
+  @include respond-to("desktop") {
     @content;
   }
 }
 
 @mixin widescreen {
-  @include respond-to($breaking-point-widescreen, $breaking-point-fullhd - 1px) {
+  @include respond-to("widescreen", "fullhd") {
     @content;
   }
 }
 
 @mixin fullhd {
-  @include respond-to($breaking-point-fullhd) {
+  @include respond-to("fullhd") {
     @content;
   }
 }
 
 @mixin tablet-only {
-  @include respond-to($breaking-point-tablet, $breaking-point-desktop - 1px) {
+  @include respond-to("tablet", "desktop") {
     @content;
   }
 }
 
 @mixin desktop-only {
-  @include respond-to($breaking-point-desktop, $breaking-point-widescreen - 1px) {
+  @include respond-to("desktop", "widescreen") {
     @content;
   }
 }
 
 @mixin widescreen-only {
-  @include respond-to($breaking-point-widescreen, $breaking-point-fullhd - 1px) {
+  @include respond-to("widescreen", "fullhd") {
     @content;
   }
 }
 
 @mixin touch {
-  @include respond-to(0, $breaking-point-desktop - 1px) {
+  @include respond-to("mobile", "desktop") {
     @content;
   }
 }
 
 @mixin until-widescreen {
-  @include respond-to(0, $breaking-point-widescreen - 1px) {
+  @include respond-to("mobile", "widescreen") {
     @content;
   }
 }
 
-@mixin until($max-width) {
-  @include respond-to(0, $max-width - 1px) {
+@mixin until($to) {
+  @include respond-to("mobile", $to) {
     @content;
   }
 }

@@ -1,9 +1,13 @@
 .label {
   padding: rem(15px);
+
+  @include touch {
+    display: none;
+  }
 }
 
 .select {
-  border: 1px solid $color-black;
+  border: none;
   border-radius: 5px;
   width: rem(50px);
   height: rem(25px);
@@ -12,13 +16,13 @@
   font-family: var(--font-montserrat);
 
   &:hover {
-    border: 1px solid $color-desaturated-red;
     cursor: pointer;
     color: $color-desaturated-red;
   }
 
   & > option {
     color: $color-black;
+    font-weight: 600;
   }
 
   &:focus-visible {

@@ -67,10 +67,10 @@ $font-size-dec: 14px;
 }
 
 .container {
-  max-width: 1366px;
+  max-width: rem(1366px);
   min-height: 100vh;
   margin: 0 auto;
-  padding: 0 60px;
+  padding: 0 rem(60px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -147,4 +147,11 @@ $font-size-dec: 14px;
   body {
     @apply bg-background text-foreground;
   }
+}
+
+html[lang="en"] .locale-link-en,
+html[lang="lt"] .locale-link-lt {
+  text-decoration: underline;
+  text-decoration-color: $color-desaturated-red;
+  text-decoration-thickness: rem(3px);
 }

@@ -23,3 +23,5 @@ export const SocialLinksData = [
 export const CopyrightData = {
   copyrightDate: `© ${new Date().getFullYear()} `,
 };
+
+export const LocalesData = ["en", "lt"];

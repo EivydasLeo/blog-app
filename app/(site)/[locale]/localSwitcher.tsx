@@ -4,6 +4,7 @@ import styles from "@/app/styles/components/LocalSwitcher/localSwitcher.module.s
 import { useLocale } from "next-intl";
 import { useRouter } from "next/navigation";
 import { ChangeEvent, useTransition } from "react";
+import { LocalesData } from "@/app/utils/dummyData/data";
 
 export default function LocalSwitcher() {
   const [isPending, startTransition] = useTransition();
@@ -26,8 +27,11 @@ export default function LocalSwitcher() {
         onChange={onSelectChange}
         disabled={isPending}
       >
-        <option value="en">EN</option>
-        <option value="lt">LT</option>
+        {LocalesData.map((locale) => (
+          <option key={locale} value={locale}>
+            {locale.toUpperCase()}
+          </option>
+        ))}
       </select>
     </label>
   );

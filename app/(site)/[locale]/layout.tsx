@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { montserrat, fraunces, rheinmetall } from "../../fonts/font";
 import "@/app/styles/globals.scss";
-import { Navbar } from "../../components/Navbar/Navbar";
+import { Header } from "../../components/Header/Header";
 import { Footer } from "../../components/Footer/Footer";
 import { ThemeProvider } from "../../components/Theme/ThemeContext";
 import { NextIntlClientProvider } from "next-intl";
@@ -37,11 +37,9 @@ export default async function RootLayout({
       >
         <NextIntlClientProvider messages={messages}>
           <ThemeProvider>
-            <main className="container">
-              <Navbar />
-              {children}
-              <Footer />
-            </main>
+            <Header />
+            <main className="container">{/* {children} */}</main>
+            <Footer />
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>

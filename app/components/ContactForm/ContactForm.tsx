@@ -37,7 +37,7 @@ function SubmitButton({
   const { pending } = useFormStatus();
 
   return (
-    <Button type="submit" size="sm" disabled={pending}>
+    <Button variant="secondary" type="submit" size="sm" disabled={pending}>
       {pending ? translations.sending : translations.sendMessage}
     </Button>
   );
@@ -55,7 +55,7 @@ export default function ContactForm({
 
   return (
     <div>
-      <Card className={cn("w-full max-w-md ml-32", className)}>
+      <Card className={cn("w-full max-w-md ml-32 shadow-[#be7c68]", className)}>
         <CardHeader>
           <CardTitle>{translations.cardTitle}</CardTitle>
           <CardDescription>{translations.cardDescription}</CardDescription>
@@ -83,7 +83,7 @@ export default function ContactForm({
                   id="firstName"
                   name="firstName"
                   placeholder={translations.firstNamePlaceholder}
-                  className="group-data-[invalid=true]/field:border-destructive focus-visible:group-data-[invalid=true]/field:ring-destructive"
+                  className="group-data-[invalid=true]/field:border-destructive focus-visible:group-data-[invalid=true]/field:ring-destructive hover:!placeholder-[#be7c68]"
                   aria-invalid={!!state.errors?.firstName}
                   aria-errormessage="error-firstName"
                   defaultValue={state.defaultValues.firstName as string}
@@ -109,7 +109,7 @@ export default function ContactForm({
                   id="lastName"
                   name="lastName"
                   placeholder={translations.lastNamePlaceholder}
-                  className="group-data-[invalid=true]/field:border-destructive focus-visible:group-data-[invalid=true]/field:ring-destructive"
+                  className="group-data-[invalid=true]/field:border-destructive focus-visible:group-data-[invalid=true]/field:ring-destructive hover:!placeholder-[#be7c68]"
                   aria-invalid={!!state.errors?.lastName}
                   aria-errormessage="error-lastName"
                   defaultValue={state.defaultValues.lastName as string}
@@ -135,7 +135,7 @@ export default function ContactForm({
                 id="email"
                 name="email"
                 placeholder={translations.emailPlaceholder}
-                className="group-data-[invalid=true]/field:border-destructive focus-visible:group-data-[invalid=true]/field:ring-destructive"
+                className="group-data-[invalid=true]/field:border-destructive focus-visible:group-data-[invalid=true]/field:ring-destructive hover:!placeholder-[#be7c68]"
                 aria-invalid={!!state.errors?.email}
                 aria-errormessage="error-email"
                 defaultValue={state.defaultValues.email as string}
@@ -160,7 +160,7 @@ export default function ContactForm({
                 id="message"
                 name="message"
                 placeholder={translations.messagePlaceholder}
-                className="group-data-[invalid=true]/field:border-destructive focus-visible:group-data-[invalid=true]/field:ring-destructive"
+                className="group-data-[invalid=true]/field:border-destructive focus-visible:group-data-[invalid=true]/field:ring-destructive hover:!placeholder-[#be7c68]"
                 aria-invalid={!!state.errors?.message}
                 aria-errormessage="error-message"
                 defaultValue={state.defaultValues.message as string}

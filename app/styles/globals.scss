@@ -69,8 +69,8 @@ $font-size-dec: 14px;
 .container {
   max-width: rem(1366px);
   min-height: 100vh;
+  padding: rem(40px) 0;
   margin: 0 auto;
-  padding: 0 rem(60px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;

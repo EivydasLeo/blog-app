@@ -6,4 +6,8 @@
   background-repeat: no-repeat;
   background-size: 30% 100%;
   transition: 1s all ease;
+
+  @include touch {
+    padding: rem(12px) rem(24px) rem(24px);
+  }
 }

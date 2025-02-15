@@ -18,23 +18,27 @@ export default async function Books({
   const t = await getTranslations("BooksPage");
 
   return (
-    <div className={styles.container}>
+    <>
       <Divider text={t("divider")} />
-      {book &&
-        book.map((data) => (
-          <div key={data._id} className={styles.item}>
-            <Image
-              src={data.bookImage.image}
-              alt={data.bookImage.alt}
-              width={300}
-              height={300}
-            />
-            <div className={styles.description}>
-              <PortableText value={data.description} />
-              <Link href={data.link}>{t("linkTitle")}</Link>
+      <div className={styles.container}>
+        {book &&
+          book.map((data) => (
+            <div key={data._id} className={styles.item}>
+              <Image
+                src={data.bookImage.image}
+                alt={data.bookImage.alt}
+                width={300}
+                height={300}
+              />
+              <div className={styles.description}>
+                <PortableText value={data.description} />
+                <Link className={styles.link} href={data.link}>
+                  {t("linkTitle")}
+                </Link>
+              </div>
             </div>
-          </div>
-        ))}
-    </div>
+          ))}
+      </div>
+    </>
   );
 }

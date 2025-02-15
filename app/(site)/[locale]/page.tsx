@@ -14,26 +14,28 @@ export default async function Home({ params }: { params: { locale: string } }) {
   const t = await getTranslations("HomePage");
 
   return (
-    <div className={styles.container}>
-      {author &&
-        author.map((data) => (
-          <>
-            <div key={data._id} className={styles.item}>
-              <Divider text={t("divider")} />
-              <ArticleCard title={data.name} subtitle={data.headline} />
-              <PortableText value={data.bio} />
-            </div>
-            <div>
-              <Image
-                className={styles.image}
-                src={data.profileImage.image}
-                alt={data.profileImage.alt}
-                width={500}
-                height={600}
-              />
-            </div>
-          </>
-        ))}
-    </div>
+    <>
+      <Divider className={styles.divider} text={t("divider")} />
+      <div className={styles.container}>
+        {author &&
+          author.map((data) => (
+            <>
+              <div key={data._id} className={styles.item}>
+                <ArticleCard title={data.name} subtitle={data.headline} />
+                <PortableText value={data.bio} />
+              </div>
+              <div>
+                <Image
+                  className={styles.image}
+                  src={data.profileImage.image}
+                  alt={data.profileImage.alt}
+                  width={500}
+                  height={600}
+                />
+              </div>
+            </>
+          ))}
+      </div>
+    </>
   );
 }

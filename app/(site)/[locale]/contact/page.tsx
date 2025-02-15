@@ -34,9 +34,11 @@ export default async function ContactPage({
   };
 
   return (
-    <div className={styles.container}>
+    <>
       <Divider text={translations.divider} />
-      <ContactForm locale={params.locale} translations={translations} />
-    </div>
+      <div className={styles.container}>
+        <ContactForm locale={params.locale} translations={translations} />
+      </div>
+    </>
   );
 }

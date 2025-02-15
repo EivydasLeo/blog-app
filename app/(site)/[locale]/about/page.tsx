@@ -21,32 +21,42 @@ export default async function About({
   const t = await getTranslations("AboutPage");
 
   return (
-    <div className={styles.container}>
-      <div className={styles.item}>
-        <Divider text={t("divider")} />
-        {about &&
-          about.map((data) => (
-            <div key={data._id} className={styles.bio}>
-              <PortableText value={data.bio} />
-              <PortableText value={data.writing} />
-              {data.books.map((book) => (
-                <Link key={book._key} href={book.link}>
-                  {book.title}
-                </Link>
-              ))}
-              {data.articles.map((article) => (
-                <Link key={article._key} href={article.link}>
-                  {article.title}
-                </Link>
-              ))}
-            </div>
-          ))}
-      </div>
-      {slides.map((data) => (
-        <div className={styles.slider} key={data._id}>
-          <ProfileSlider slides={data.slides} _id={data._id} />
+    <>
+      <Divider className={styles.divider} text={t("divider")} />
+      <div className={styles.container}>
+        <div className={styles.item}>
+          {about &&
+            about.map((data) => (
+              <div key={data._id} className={styles.bio}>
+                <PortableText value={data.bio} />
+                <PortableText value={data.writing} />
+                {data.books.map((book) => (
+                  <Link
+                    key={book._key}
+                    href={book.link}
+                    className={styles.link}
+                  >
+                    {book.title}
+                  </Link>
+                ))}
+                {data.articles.map((article) => (
+                  <Link
+                    className={styles.link}
+                    key={article._key}
+                    href={article.link}
+                  >
+                    {article.title}
+                  </Link>
+                ))}
+              </div>
+            ))}
         </div>
-      ))}
-    </div>
+        {slides.map((data) => (
+          <div className={styles.slider} key={data._id}>
+            <ProfileSlider slides={data.slides} _id={data._id} />
+          </div>
+        ))}
+      </div>
+    </>
   );
 }

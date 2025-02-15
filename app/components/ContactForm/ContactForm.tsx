@@ -54,134 +54,132 @@ export default function ContactForm({
   const [state, formAction] = useFormState(contactFormAction, initialState);
 
   return (
-    <div>
-      <Card className={cn("w-full max-w-md ml-32 shadow-[#be7c68]", className)}>
-        <CardHeader>
-          <CardTitle>{translations.cardTitle}</CardTitle>
-          <CardDescription>{translations.cardDescription}</CardDescription>
-        </CardHeader>
-        <form action={formAction}>
-          <CardContent className="flex flex-col gap-6">
-            {state.success ? (
-              <p className="text-muted-foreground flex items-center gap-2 text-sm">
-                <Check className="size-4" />
-                {translations.messageSent}
-              </p>
-            ) : null}
-            <div className="flex gap-4">
-              <div
-                className="group/field grid gap-2 flex-1"
-                data-invalid={!!state.errors?.firstName}
-              >
-                <Label
-                  htmlFor="firstName"
-                  className="group-data-[invalid=true]/field:text-destructive"
-                >
-                  {translations.firstName} <span aria-hidden="true">*</span>
-                </Label>
-                <Input
-                  id="firstName"
-                  name="firstName"
-                  placeholder={translations.firstNamePlaceholder}
-                  className="group-data-[invalid=true]/field:border-destructive focus-visible:group-data-[invalid=true]/field:ring-destructive hover:!placeholder-[#be7c68]"
-                  aria-invalid={!!state.errors?.firstName}
-                  aria-errormessage="error-firstName"
-                  defaultValue={state.defaultValues.firstName as string}
-                />
-                {state.errors?.firstName && (
-                  <p id="error-firstName" className="text-destructive text-sm">
-                    {state.errors.firstName}
-                  </p>
-                )}
-              </div>
-              <div
-                className="group/field grid gap-2 flex-1"
-                data-invalid={!!state.errors?.lastName}
-              >
-                <Label
-                  htmlFor="lastName"
-                  className="group-data-[invalid=true]/field:text-destructive"
-                >
-                  {translations.lastName}
-                  <span aria-hidden="true">*</span>
-                </Label>
-                <Input
-                  id="lastName"
-                  name="lastName"
-                  placeholder={translations.lastNamePlaceholder}
-                  className="group-data-[invalid=true]/field:border-destructive focus-visible:group-data-[invalid=true]/field:ring-destructive hover:!placeholder-[#be7c68]"
-                  aria-invalid={!!state.errors?.lastName}
-                  aria-errormessage="error-lastName"
-                  defaultValue={state.defaultValues.lastName as string}
-                />
-                {state.errors?.lastName && (
-                  <p id="error-lastName" className="text-destructive text-sm">
-                    {state.errors.lastName}
-                  </p>
-                )}
-              </div>
-            </div>
+    <Card className={cn("w-full max-w-md shadow-[#be7c68]", className)}>
+      <CardHeader>
+        <CardTitle>{translations.cardTitle}</CardTitle>
+        <CardDescription>{translations.cardDescription}</CardDescription>
+      </CardHeader>
+      <form action={formAction}>
+        <CardContent className="flex flex-col gap-6">
+          {state.success ? (
+            <p className="text-muted-foreground flex items-center gap-2 text-sm">
+              <Check className="size-4" />
+              {translations.messageSent}
+            </p>
+          ) : null}
+          <div className="flex gap-4">
             <div
-              className="group/field grid gap-2"
-              data-invalid={!!state.errors?.email}
+              className="group/field grid gap-2 flex-1"
+              data-invalid={!!state.errors?.firstName}
             >
               <Label
-                htmlFor="email"
+                htmlFor="firstName"
                 className="group-data-[invalid=true]/field:text-destructive"
               >
-                {translations.email} <span aria-hidden="true">*</span>
+                {translations.firstName} <span aria-hidden="true">*</span>
               </Label>
               <Input
-                id="email"
-                name="email"
-                placeholder={translations.emailPlaceholder}
+                id="firstName"
+                name="firstName"
+                placeholder={translations.firstNamePlaceholder}
                 className="group-data-[invalid=true]/field:border-destructive focus-visible:group-data-[invalid=true]/field:ring-destructive hover:!placeholder-[#be7c68]"
-                aria-invalid={!!state.errors?.email}
-                aria-errormessage="error-email"
-                defaultValue={state.defaultValues.email as string}
+                aria-invalid={!!state.errors?.firstName}
+                aria-errormessage="error-firstName"
+                defaultValue={state.defaultValues.firstName as string}
               />
-              {state.errors?.email && (
-                <p id="error-email" className="text-destructive text-sm">
-                  {state.errors.email}
+              {state.errors?.firstName && (
+                <p id="error-firstName" className="text-destructive text-sm">
+                  {state.errors.firstName}
                 </p>
               )}
             </div>
             <div
-              className="group/field grid gap-2"
-              data-invalid={!!state.errors?.message}
+              className="group/field grid gap-2 flex-1"
+              data-invalid={!!state.errors?.lastName}
             >
               <Label
-                htmlFor="message"
+                htmlFor="lastName"
                 className="group-data-[invalid=true]/field:text-destructive"
               >
-                {translations.message} <span aria-hidden="true">*</span>
+                {translations.lastName}
+                <span aria-hidden="true">*</span>
               </Label>
-              <Textarea
-                id="message"
-                name="message"
-                placeholder={translations.messagePlaceholder}
+              <Input
+                id="lastName"
+                name="lastName"
+                placeholder={translations.lastNamePlaceholder}
                 className="group-data-[invalid=true]/field:border-destructive focus-visible:group-data-[invalid=true]/field:ring-destructive hover:!placeholder-[#be7c68]"
-                aria-invalid={!!state.errors?.message}
-                aria-errormessage="error-message"
-                defaultValue={state.defaultValues.message as string}
+                aria-invalid={!!state.errors?.lastName}
+                aria-errormessage="error-lastName"
+                defaultValue={state.defaultValues.lastName as string}
               />
-              {state.errors?.message && (
-                <p id="error-message" className="text-destructive text-sm">
-                  {state.errors.message}
+              {state.errors?.lastName && (
+                <p id="error-lastName" className="text-destructive text-sm">
+                  {state.errors.lastName}
                 </p>
               )}
             </div>
-          </CardContent>
-          <CardFooter>
-            <SubmitButton
-              translations={{
-                sending: translations.sending,
-                sendMessage: translations.sendMessage,
-              }}
+          </div>
+          <div
+            className="group/field grid gap-2"
+            data-invalid={!!state.errors?.email}
+          >
+            <Label
+              htmlFor="email"
+              className="group-data-[invalid=true]/field:text-destructive"
+            >
+              {translations.email} <span aria-hidden="true">*</span>
+            </Label>
+            <Input
+              id="email"
+              name="email"
+              placeholder={translations.emailPlaceholder}
+              className="group-data-[invalid=true]/field:border-destructive focus-visible:group-data-[invalid=true]/field:ring-destructive hover:!placeholder-[#be7c68]"
+              aria-invalid={!!state.errors?.email}
+              aria-errormessage="error-email"
+              defaultValue={state.defaultValues.email as string}
             />
-          </CardFooter>
-        </form>
-      </Card>
-    </div>
+            {state.errors?.email && (
+              <p id="error-email" className="text-destructive text-sm">
+                {state.errors.email}
+              </p>
+            )}
+          </div>
+          <div
+            className="group/field grid gap-2"
+            data-invalid={!!state.errors?.message}
+          >
+            <Label
+              htmlFor="message"
+              className="group-data-[invalid=true]/field:text-destructive"
+            >
+              {translations.message} <span aria-hidden="true">*</span>
+            </Label>
+            <Textarea
+              id="message"
+              name="message"
+              placeholder={translations.messagePlaceholder}
+              className="group-data-[invalid=true]/field:border-destructive focus-visible:group-data-[invalid=true]/field:ring-destructive hover:!placeholder-[#be7c68]"
+              aria-invalid={!!state.errors?.message}
+              aria-errormessage="error-message"
+              defaultValue={state.defaultValues.message as string}
+            />
+            {state.errors?.message && (
+              <p id="error-message" className="text-destructive text-sm">
+                {state.errors.message}
+              </p>
+            )}
+          </div>
+        </CardContent>
+        <CardFooter>
+          <SubmitButton
+            translations={{
+              sending: translations.sending,
+              sendMessage: translations.sendMessage,
+            }}
+          />
+        </CardFooter>
+      </form>
+    </Card>
   );
 }

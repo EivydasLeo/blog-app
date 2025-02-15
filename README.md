@@ -18,3 +18,9 @@ This is a blog application built with Next.js and Sanity as the content manageme
 3. Add required keys from `.env.sample` to `.env.local`
 4. `npm run dev`
 5. Access the application at http://localhost:3000, with dynamic routes for different locales (e.g., /en for English, /lt for Lithuanian)
+
+## The Website Is Live!
+
+The website is currently live, but it’s not fully finished. The main functionality has been implemented, but the styling, such as mobile responsiveness, is still in progress.
+
+https://www.gretaska.com/

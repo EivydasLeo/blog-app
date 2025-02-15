@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "@/app/styles/components/footer/footer.module.scss";
+import styles from "@/app/styles/components/Footer/footer.module.scss";
 import { NavigationLinks } from "../NavigationLinks/NavigationLinks";
 import { SocialLinks } from "../SocialLinks/SocialLinks";
 import { Copyright } from "../Copyright/Copyright";

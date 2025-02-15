@@ -14,7 +14,11 @@
     "divider": "About Author"
   },
   "StoriesPage": {
-    "divider": "Short Stories"
+    "divider": "Short Stories",
+    "readMore": "Read More"
+  },
+  "SingleStoriePage": {
+    "divider": "Short Storie"
   },
   "BooksPage": {
     "divider": "Books",

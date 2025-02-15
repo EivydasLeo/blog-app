@@ -14,7 +14,11 @@
     "divider": "Apie Autorę"
   },
   "StoriesPage": {
-    "divider": "Novelės"
+    "divider": "Novelės",
+    "readMore": "Skaityti daugiau"
+  },
+  "SingleStoriePage": {
+    "divider": "Novelė"
   },
   "BooksPage": {
     "divider": "Knygos",

@@ -5,6 +5,7 @@ import type { StorieTypes } from "@/types/types";
 import { Divider } from "@/app/components/Divider/Divider";
 import { getTranslations } from "next-intl/server";
 import Link from "next/link";
+import { PortableText } from "next-sanity";
 
 export default async function Stories({
   params,
@@ -23,8 +24,11 @@ export default async function Stories({
           storie.map((data) => (
             <div key={data._id} className={styles.item}>
               <h3 className={styles.title}>{data.title}</h3>
+              <div className={`${styles.text} ${styles.mask}`}>
+                <PortableText value={data.storie} />
+              </div>
               <Link
-                className={styles.link}
+                className={styles.linkNext}
                 href={`/${locale}/stories/${data.slug}`}
               >
                 {t("readMore")}

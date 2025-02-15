@@ -9,6 +9,7 @@ import { Footer } from "../../components/Footer/Footer";
 import { ThemeProvider } from "../../components/Theme/ThemeContext";
 import { NextIntlClientProvider } from "next-intl";
 import styles from "@/app/styles/components/Main/main.module.scss";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
   title: "Greta SKA",
@@ -37,7 +38,10 @@ export default async function RootLayout({
           <ThemeProvider>
             <div className="container">
               <Header />
-              <main className={styles.container}>{children}</main>
+              <main className={styles.container}>
+                {children}
+                <SpeedInsights />
+              </main>
               <Footer />
             </div>
           </ThemeProvider>

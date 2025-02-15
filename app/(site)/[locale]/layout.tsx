@@ -8,10 +8,11 @@ import { Header } from "../../components/Header/Header";
 import { Footer } from "../../components/Footer/Footer";
 import { ThemeProvider } from "../../components/Theme/ThemeContext";
 import { NextIntlClientProvider } from "next-intl";
+import styles from "@/app/styles/components/Main/main.module.scss";
 
 export const metadata: Metadata = {
   title: "Greta SKA",
-  description: "Blog",
+  description: "Blog Page",
 };
 
 export default async function RootLayout({
@@ -21,13 +22,10 @@ export default async function RootLayout({
   children: React.ReactNode;
   params: { locale: string };
 }>) {
-  // Ensure that the incoming `locale` is valid
   if (!routing.locales.includes(locale as any)) {
     notFound();
   }
 
-  // Providing all messages to the client
-  // side is the easiest way to get started
   const messages = await getMessages();
 
   return (
@@ -37,9 +35,11 @@ export default async function RootLayout({
       >
         <NextIntlClientProvider messages={messages}>
           <ThemeProvider>
-            <Header />
-            <main className="container">{/* {children} */}</main>
-            <Footer />
+            <div className="container">
+              <Header />
+              <main className={styles.container}>{children}</main>
+              <Footer />
+            </div>
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>

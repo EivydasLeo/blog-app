@@ -67,13 +67,12 @@ $font-size-dec: 14px;
 }
 
 .container {
-  max-width: rem(1366px);
-  min-height: 100vh;
-  padding: rem(40px) 0;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: rem(50px);
+  max-width: rem(1300px);
+  min-height: 100vh;
+  margin: 0 auto;
 }
 
 .swiper-pagination-bullet {

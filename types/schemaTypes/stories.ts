@@ -12,6 +12,16 @@ export default defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
+      name: "slug",
+      title: "Slug",
+      type: "slug",
+      options: {
+        source: "title.en",
+        maxLength: 96,
+      },
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
       name: "storie",
       title: "Storie",
       type: "localeBlockContent",

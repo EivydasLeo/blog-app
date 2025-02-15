@@ -1,10 +1,10 @@
 import React from "react";
 import styles from "@/app/styles/stories/stories.module.scss";
-import { getStorie } from "@/sanity/sanity.query";
-import type { StorieType } from "@/types/types";
-import { PortableText } from "@portabletext/react";
+import { getStories } from "@/sanity/sanity.query";
+import type { StorieTypes } from "@/types/types";
 import { Divider } from "@/app/components/Divider/Divider";
 import { getTranslations } from "next-intl/server";
+import Link from "next/link";
 
 export default async function Stories({
   params,
@@ -12,21 +12,26 @@ export default async function Stories({
   params: { locale: string };
 }) {
   const { locale } = params;
-  const storie: StorieType[] = await getStorie(locale);
+  const storie: StorieTypes[] = await getStories(locale);
   const t = await getTranslations("StoriesPage");
 
   return (
-    <div className={styles.container}>
+    <>
       <Divider text={t("divider")} />
-      {storie &&
-        storie.map((data) => (
-          <div key={data._id} className={styles.item}>
-            <h3 className={styles.title}>{data.title}</h3>
-            <div className={styles.text}>
-              <PortableText value={data.storie} />
+      <div className={styles.container}>
+        {storie &&
+          storie.map((data) => (
+            <div key={data._id} className={styles.item}>
+              <h3 className={styles.title}>{data.title}</h3>
+              <Link
+                className={styles.link}
+                href={`/${locale}/stories/${data.slug}`}
+              >
+                {t("readMore")}
+              </Link>
             </div>
-          </div>
-        ))}
-    </div>
+          ))}
+      </div>
+    </>
   );
 }

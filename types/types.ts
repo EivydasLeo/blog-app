@@ -51,9 +51,10 @@ export type AboutType = {
   ];
 };
 
-export type StorieType = {
+export type StorieTypes = {
   _id: string;
   title: string;
+  slug: string;
   storie: PortableTextBlock[];
 };
 

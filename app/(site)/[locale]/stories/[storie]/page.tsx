@@ -3,8 +3,9 @@ import styles from "@/app/styles/stories/stories.module.scss";
 import { getSingleStorie } from "@/sanity/sanity.query";
 import type { StorieTypes } from "@/types/types";
 import { PortableText } from "@portabletext/react";
-import { Divider } from "@/app/components/Divider/Divider";
-import { getTranslations } from "next-intl/server";
+
+import Link from "next/link";
+import { notFound } from "next/navigation";
 
 export default async function Storie({
   params,
@@ -13,12 +14,15 @@ export default async function Storie({
 }) {
   const { locale, storie } = params;
   const data: StorieTypes = await getSingleStorie(locale, storie);
-  const t = await getTranslations("SingleStoriePage");
+
+  if (!data) {
+    notFound();
+  }
 
   return (
     <>
-      <Divider text={t("divider")} />
       <div className={styles.container}>
+        <Link className={styles.linkBack} href={`/${locale}/stories/`} />
         {data && (
           <div key={data._id} className={styles.item}>
             <h3 className={styles.title}>{data.title}</h3>

@@ -3,10 +3,6 @@
   flex-direction: column;
   gap: rem(40px);
   max-width: fit-content;
-
-  & > :first-child {
-    margin-bottom: rem(50px);
-  }
 }
 
 .item {
@@ -21,4 +17,8 @@
   flex-direction: column;
   gap: rem(40px);
   max-width: fit-content;
+}
+
+.link {
+  text-decoration: underline;
 }

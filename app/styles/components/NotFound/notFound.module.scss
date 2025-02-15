@@ -2,11 +2,10 @@
   display: flex;
   flex-direction: column;
   gap: rem(40px);
-  margin-top: rem(50px);
 }
 
 .image {
-  box-shadow: 0 0 15px 0px #180701;
+  box-shadow: 0 0 rem(15px) 0px #180701;
 }
 
 .title {

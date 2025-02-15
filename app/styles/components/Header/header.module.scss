@@ -1,10 +1,9 @@
 .container {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
-  max-width: rem(1300px);
-  gap: rem(30px);
-  width: 73%;
+  gap: rem(60px);
+  height: rem(75px);
 
   @include until("desktop") {
     justify-content: space-around;

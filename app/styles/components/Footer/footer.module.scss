@@ -1,6 +1,6 @@
 .container {
-  max-width: rem(1300px);
   width: 73%;
+  margin-top: auto;
 
   @include touch {
     display: flex;
@@ -13,6 +13,7 @@
     flex-direction: column;
     align-items: center;
     gap: rem(50px);
+    padding-bottom: rem(20px);
   }
 }
 

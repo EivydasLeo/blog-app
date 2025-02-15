@@ -3,12 +3,6 @@
   flex-direction: column;
   gap: rem(40px);
   max-width: fit-content;
-  padding-bottom: rem(100px);
-
-  & > :first-child {
-    width: rem(190px);
-    height: rem(90px);
-  }
 }
 
 .item {
@@ -27,4 +21,35 @@
 .text {
   text-align: justify;
   max-width: rem(1000px);
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: rem(5px);
+  cursor: pointer;
+  position: relative;
+  width: fit-content;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: $color-desaturated-red;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  &:hover {
+    &::before {
+      transform: scaleX(1);
+    }
+  }
+
+  &::after {
+    content: "›";
+  }
 }

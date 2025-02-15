@@ -4,7 +4,7 @@ This is a blog application built with Next.js and Sanity as the content manageme
 
 ## Features
 
-- **Next.js** Framework: Server-side rendering (SSR) and optimized routing using the app directory structure.
+- **Next.js Framework**: Server-side rendering (SSR) and optimized routing using the app directory structure.
 - **Sanity CMS**: Manage content and localization data, including translations for multiple languages (e.g., English and Lithuanian).
 - **next-intl Integration**: Translations are managed through next-intl, enabling dynamic localization based on the user's selected language.
 - **Swiper Integration**: Image sliding functionality implemented using Swiper for smooth, responsive image galleries.

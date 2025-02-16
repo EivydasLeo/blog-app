@@ -8,12 +8,12 @@ import localeString from "../locales/localizationSchemaTypes/localeString";
 import localeBlockContent from "../locales/localizationSchemaTypes/localeBlockContent";
 
 export const schemaTypes = [
-  author,
-  about,
-  photo,
-  slides,
-  stories,
-  books,
-  localeString,
-  localeBlockContent,
+    author,
+    about,
+    photo,
+    slides,
+    stories,
+    books,
+    localeString,
+    localeBlockContent,
 ];

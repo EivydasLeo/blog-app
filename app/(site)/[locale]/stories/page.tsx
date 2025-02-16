@@ -8,34 +8,30 @@ import Link from "next/link";
 import { PortableText } from "next-sanity";
 
 export default async function Stories({
-  params,
+    params,
 }: {
-  params: { locale: string };
-}) {
-  const { locale } = params;
-  const storie: StorieTypes[] = await getStories(locale);
-  const t = await getTranslations("StoriesPage");
+    params: { locale: string };
+}): Promise<React.JSX.Element> {
+    const { locale } = params;
+    const storie: StorieTypes[] = await getStories(locale);
+    const t = await getTranslations("StoriesPage");
 
-  return (
-    <>
-      <Divider text={t("divider")} />
-      <div className={styles.container}>
-        {storie &&
-          storie.map((data) => (
-            <div key={data._id} className={styles.item}>
-              <h3 className={styles.title}>{data.title}</h3>
-              <div className={`${styles.text} ${styles.mask}`}>
-                <PortableText value={data.storie} />
-              </div>
-              <Link
-                className={styles.linkNext}
-                href={`/${locale}/stories/${data.slug}`}
-              >
-                {t("readMore")}
-              </Link>
+    return (
+        <>
+            <Divider text={t("divider")} />
+            <div className={styles.container}>
+                {storie?.map((data) => (
+                    <div key={data._id} className={styles.item}>
+                        <h3 className={styles.title}>{data.title}</h3>
+                        <div className={`${styles.text} ${styles.mask}`}>
+                            <PortableText value={data.storie} />
+                        </div>
+                        <Link className={styles.linkNext} href={`/${locale}/stories/${data.slug}`}>
+                            {t("readMore")}
+                        </Link>
+                    </div>
+                ))}
             </div>
-          ))}
-      </div>
-    </>
-  );
+        </>
+    );
 }

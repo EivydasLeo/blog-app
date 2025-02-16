@@ -12,41 +12,39 @@ import styles from "@/app/styles/components/Main/main.module.scss";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
-  title: "Greta SKA",
-  description: "Blog Page",
+    title: "Greta SKA",
+    description: "Blog Page",
 };
 
 export default async function RootLayout({
-  children,
-  params: { locale },
+    children,
+    params: { locale },
 }: Readonly<{
-  children: React.ReactNode;
-  params: { locale: string };
-}>) {
-  if (!routing.locales.includes(locale as never)) {
-    notFound();
-  }
+    children: React.ReactNode;
+    params: { locale: string };
+}>): Promise<React.JSX.Element> {
+    if (!routing.locales.includes(locale as never)) {
+        notFound();
+    }
 
-  const messages = await getMessages();
+    const messages = await getMessages();
 
-  return (
-    <html lang={locale}>
-      <body
-        className={`${montserrat.variable} ${fraunces.variable} ${rheinmetall.variable}`}
-      >
-        <NextIntlClientProvider messages={messages}>
-          <ThemeProvider>
-            <div className="container">
-              <Header />
-              <main className={styles.container}>
-                {children}
-                <SpeedInsights />
-              </main>
-              <Footer />
-            </div>
-          </ThemeProvider>
-        </NextIntlClientProvider>
-      </body>
-    </html>
-  );
+    return (
+        <html lang={locale}>
+            <body className={`${montserrat.variable} ${fraunces.variable} ${rheinmetall.variable}`}>
+                <NextIntlClientProvider messages={messages}>
+                    <ThemeProvider>
+                        <div className="container">
+                            <Header />
+                            <main className={styles.container}>
+                                {children}
+                                <SpeedInsights />
+                            </main>
+                            <Footer />
+                        </div>
+                    </ThemeProvider>
+                </NextIntlClientProvider>
+            </body>
+        </html>
+    );
 }

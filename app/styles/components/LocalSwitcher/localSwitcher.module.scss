@@ -1,32 +1,32 @@
 .label {
-  padding: rem(15px);
+    padding: rem(15px);
 
-  @include touch {
-    display: none;
-  }
+    @include touch {
+        display: none;
+    }
 }
 
 .select {
-  border: none;
-  border-radius: 5px;
-  width: rem(50px);
-  height: rem(25px);
-  background-color: inherit;
-  font-weight: 600;
-  font-family: var(--font-montserrat);
-
-  &:hover {
-    cursor: pointer;
-    color: $color-desaturated-red;
-  }
-
-  & > option {
-    color: $color-black;
+    border: none;
+    border-radius: 5px;
+    width: rem(50px);
+    height: rem(25px);
+    background-color: inherit;
     font-weight: 600;
-  }
+    font-family: var(--font-montserrat);
 
-  &:focus-visible {
-    outline: none;
-    box-shadow: none;
-  }
+    &:hover {
+        cursor: pointer;
+        color: $color-desaturated-red;
+    }
+
+    & > option {
+        color: $color-black;
+        font-weight: 600;
+    }
+
+    &:focus-visible {
+        outline: none;
+        box-shadow: none;
+    }
 }

@@ -1,85 +1,85 @@
 .container {
-  display: flex;
-  flex-direction: column;
-  gap: rem(40px);
-  max-width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: rem(40px);
+    max-width: fit-content;
 }
 
 .item {
-  display: flex;
-  flex-direction: column;
-  gap: rem(10px);
-  font-family: var(--font-rheinmetall);
-  max-width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: rem(10px);
+    font-family: var(--font-rheinmetall);
+    max-width: fit-content;
 }
 
 .title {
-  display: inline-block;
-  max-width: fit-content;
+    display: inline-block;
+    max-width: fit-content;
 }
 
 .text {
-  text-align: justify;
-  max-width: rem(792px);
+    text-align: justify;
+    max-width: rem(792px);
 }
 
 .mask {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
-  overflow: hidden;
-  text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    text-overflow: ellipsis;
 
-  mask: linear-gradient(
-    to bottom,
-    rgb(0, 0, 0) 0%,
-    rgb(0, 0, 0) 35%,
-    rgb(0, 0, 0) 50%,
-    rgb(0, 0, 0) 65%,
-    rgba(0, 0, 0, 0) 100%
-  );
+    mask: linear-gradient(
+        to bottom,
+        rgb(0, 0, 0) 0%,
+        rgb(0, 0, 0) 35%,
+        rgb(0, 0, 0) 50%,
+        rgb(0, 0, 0) 65%,
+        rgba(0, 0, 0, 0) 100%
+    );
 }
 
 .linkNext {
-  display: inline-flex;
-  align-items: center;
-  gap: rem(5px);
-  cursor: pointer;
-  position: relative;
-  width: fit-content;
-  font-size: rem(14px);
+    display: inline-flex;
+    align-items: center;
+    gap: rem(5px);
+    cursor: pointer;
+    position: relative;
+    width: fit-content;
+    font-size: rem(14px);
 
-  &::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: rem(2px);
-    background-color: $color-desaturated-red;
-    transform: scaleX(0);
-    transition: transform 0.3s ease-in-out;
-  }
-
-  &:hover {
     &::before {
-      transform: scaleX(1);
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: rem(2px);
+        background-color: $color-desaturated-red;
+        transform: scaleX(0);
+        transition: transform 0.3s ease-in-out;
     }
-  }
 
-  &::after {
-    content: "›";
-  }
+    &:hover {
+        &::before {
+            transform: scaleX(1);
+        }
+    }
+
+    &::after {
+        content: "›";
+    }
 }
 
 .linkBack {
-  font-size: rem(30px);
+    font-size: rem(30px);
 
-  &:hover {
-    color: $color-desaturated-red;
-  }
+    &:hover {
+        color: $color-desaturated-red;
+    }
 
-  &::after {
-    content: "←";
-  }
+    &::after {
+        content: "←";
+    }
 }

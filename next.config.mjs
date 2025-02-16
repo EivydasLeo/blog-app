@@ -10,21 +10,21 @@ const __dirname = path.dirname(__filename);
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  sassOptions: {
-    includePaths: [path.join(__dirname, "styles")],
-    prependData: `
+    sassOptions: {
+        includePaths: [path.join(__dirname, "styles")],
+        prependData: `
       @import "app/styles/variables/variables.scss";
     `,
-  },
-  images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "cdn.sanity.io",
-        port: "",
-      },
-    ],
-  },
+    },
+    images: {
+        remotePatterns: [
+            {
+                protocol: "https",
+                hostname: "cdn.sanity.io",
+                port: "",
+            },
+        ],
+    },
 };
 
 export default withNextIntl(nextConfig);

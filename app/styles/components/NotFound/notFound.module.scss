@@ -1,13 +1,13 @@
 .container {
-  display: flex;
-  flex-direction: column;
-  gap: rem(40px);
+    display: flex;
+    flex-direction: column;
+    gap: rem(40px);
 }
 
 .image {
-  box-shadow: 0 0 rem(15px) 0px #180701;
+    box-shadow: 0 0 rem(15px) 0px #180701;
 }
 
 .title {
-  font-family: var(--font-fraunces);
+    font-family: var(--font-fraunces);
 }

@@ -1,24 +1,24 @@
 .container {
-  display: flex;
-  flex-direction: column;
-  gap: rem(40px);
-  max-width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: rem(40px);
+    max-width: fit-content;
 }
 
 .item {
-  display: flex;
-  gap: rem(30px);
-  max-width: rem(900px);
+    display: flex;
+    gap: rem(30px);
+    max-width: rem(900px);
 }
 
 .description {
-  display: flex;
-  flex-direction: column;
-  gap: rem(40px);
-  max-width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: rem(40px);
+    max-width: fit-content;
 }
 
 .link {
-  text-decoration: underline;
-  width: fit-content;
+    text-decoration: underline;
+    width: fit-content;
 }

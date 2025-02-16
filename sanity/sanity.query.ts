@@ -2,8 +2,8 @@ import { groq } from "next-sanity";
 import client from "./sanity.client";
 
 export async function getAuthor(locale: string) {
-  return client.fetch(
-    groq`*[_type == "author"]{
+    return await client.fetch(
+        groq`*[_type == "author"]{
       _id,
       "name": name[$locale],
       "headline": headline[$locale],
@@ -13,13 +13,13 @@ export async function getAuthor(locale: string) {
       },
       "bio": bio[$locale],
     }`,
-    { locale }
-  );
+        { locale },
+    );
 }
 
 export async function getPhoto() {
-  return client.fetch(
-    groq`*[_type == "photo"]{
+    return await client.fetch(
+        groq`*[_type == "photo"]{
       _id,
       _createdAt,
       _updatedAt,
@@ -31,13 +31,13 @@ export async function getPhoto() {
           url
         }
       }
-    }`
-  );
+    }`,
+    );
 }
 
 export async function getSlide() {
-  return client.fetch(
-    groq`*[_type == "slides"] {
+    return await client.fetch(
+        groq`*[_type == "slides"] {
       _id,
       slides[]-> { 
         _id,
@@ -50,13 +50,13 @@ export async function getSlide() {
           }
         }
       }
-    }`
-  );
+    }`,
+    );
 }
 
 export async function getAbout(locale: string) {
-  return client.fetch(
-    groq`*[_type == "about"]{
+    return await client.fetch(
+        groq`*[_type == "about"]{
       _id,
       "name": name[$locale],
       "headline": headline[$locale],
@@ -65,41 +65,41 @@ export async function getAbout(locale: string) {
       books,
       articles
     }`,
-    { locale }
-  );
+        { locale },
+    );
 }
 
 export async function getStories(locale: string) {
-  return client.fetch(
-    groq`*[_type == "stories"]{
+    return await client.fetch(
+        groq`*[_type == "stories"]{
       _id,
       "title": title[$locale],
       "storie": storie[$locale],
       "slug": slug.current
     }`,
-    { locale }
-  );
+        { locale },
+    );
 }
 
 export async function getSingleStorie(locale: string, slug: string) {
-  return client.fetch(
-    groq`*[_type == "stories" && slug.current == $slug][0]{
+    return await client.fetch(
+        groq`*[_type == "stories" && slug.current == $slug][0]{
       _id,
       "title": title[$locale],
       "storie": storie[$locale],
     }`,
-    { locale, slug }
-  );
+        { locale, slug },
+    );
 }
 
 export async function getBook(locale: string) {
-  return client.fetch(
-    groq`*[_type == "books"]{
+    return await client.fetch(
+        groq`*[_type == "books"]{
       _id,
       bookImage {alt, "image": asset->url},
       "description": description[$locale],
       link
     }`,
-    { locale }
-  );
+        { locale },
+    );
 }

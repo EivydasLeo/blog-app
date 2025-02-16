@@ -1,27 +1,27 @@
 .container {
-  display: flex;
-  align-items: center;
-  gap: rem(20px);
+    display: flex;
+    align-items: center;
+    gap: rem(20px);
 
-  @include touch {
-    display: none;
-  }
+    @include touch {
+        display: none;
+    }
 }
 
 .links {
-  display: flex;
-  align-items: center;
-  @include text-navbar-links;
+    display: flex;
+    align-items: center;
+    @include text-navbar-links;
 }
 
 .link {
-  &:hover {
-    color: $color-desaturated-red;
-    transition: color 0.25s ease-in-out 0s;
-    will-change: color;
-  }
+    &:hover {
+        color: $color-desaturated-red;
+        transition: color 0.25s ease-in-out 0s;
+        will-change: color;
+    }
 }
 
 .active {
-  color: $color-desaturated-red;
+    color: $color-desaturated-red;
 }

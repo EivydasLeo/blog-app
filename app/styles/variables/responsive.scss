@@ -1,88 +1,88 @@
 $breakpoints: (
-  "mobile": 320px,
-  "tablet": 768px,
-  "desktop": 1024px,
-  "widescreen": 1440px,
-  "fullhd": 1820px,
+    "mobile": 320px,
+    "tablet": 768px,
+    "desktop": 1024px,
+    "widescreen": 1440px,
+    "fullhd": 1820px,
 );
 
 @mixin respond-to($from, $to: null) {
-  $min: map-get($breakpoints, $from);
-  $max: if($to, map-get($breakpoints, $to) - 1px, null);
+    $min: map-get($breakpoints, $from);
+    $max: if($to, map-get($breakpoints, $to) - 1px, null);
 
-  @if $max {
-    @media (min-width: $min) and (max-width: $max) {
-      @content;
+    @if $max {
+        @media (min-width: $min) and (max-width: $max) {
+            @content;
+        }
+    } @else {
+        @media (min-width: $min) {
+            @content;
+        }
     }
-  } @else {
-    @media (min-width: $min) {
-      @content;
-    }
-  }
 }
 
 @mixin mobile {
-  @include respond-to("mobile", "tablet") {
-    @content;
-  }
+    @include respond-to("mobile", "tablet") {
+        @content;
+    }
 }
 
 @mixin tablet {
-  @include respond-to("tablet", "desktop") {
-    @content;
-  }
+    @include respond-to("tablet", "desktop") {
+        @content;
+    }
 }
 
 @mixin desktop {
-  @include respond-to("desktop") {
-    @content;
-  }
+    @include respond-to("desktop") {
+        @content;
+    }
 }
 
 @mixin widescreen {
-  @include respond-to("widescreen", "fullhd") {
-    @content;
-  }
+    @include respond-to("widescreen", "fullhd") {
+        @content;
+    }
 }
 
 @mixin fullhd {
-  @include respond-to("fullhd") {
-    @content;
-  }
+    @include respond-to("fullhd") {
+        @content;
+    }
 }
 
 @mixin tablet-only {
-  @include respond-to("tablet", "desktop") {
-    @content;
-  }
+    @include respond-to("tablet", "desktop") {
+        @content;
+    }
 }
 
 @mixin desktop-only {
-  @include respond-to("desktop", "widescreen") {
-    @content;
-  }
+    @include respond-to("desktop", "widescreen") {
+        @content;
+    }
 }
 
 @mixin widescreen-only {
-  @include respond-to("widescreen", "fullhd") {
-    @content;
-  }
+    @include respond-to("widescreen", "fullhd") {
+        @content;
+    }
 }
 
 @mixin touch {
-  @include respond-to("mobile", "desktop") {
-    @content;
-  }
+    @include respond-to("mobile", "desktop") {
+        @content;
+    }
 }
 
 @mixin until-widescreen {
-  @include respond-to("mobile", "widescreen") {
-    @content;
-  }
+    @include respond-to("mobile", "widescreen") {
+        @content;
+    }
 }
 
 @mixin until($to) {
-  @include respond-to("mobile", $to) {
-    @content;
-  }
+    @include respond-to("mobile", $to) {
+        @content;
+    }
 }

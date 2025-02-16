@@ -1,13 +1,13 @@
 .light {
-  background: linear-gradient(to right, $color-white-smoke, transparent 5%),
-    url("/background/brown-material.jpg");
-  background-color: $color-white-smoke;
-  background-position: 70vw 0;
-  background-repeat: no-repeat;
-  background-size: 30% 100%;
-  transition: 1s all ease;
+    background: linear-gradient(to right, $color-white-smoke, transparent 5%),
+        url("/background/brown-material.jpg");
+    background-color: $color-white-smoke;
+    background-position: 70vw 0;
+    background-repeat: no-repeat;
+    background-size: 30% 100%;
+    transition: 1s all ease;
 
-  @include touch {
-    padding: rem(12px) rem(24px) rem(24px);
-  }
+    @include touch {
+        padding: rem(12px) rem(24px) rem(24px);
+    }
 }

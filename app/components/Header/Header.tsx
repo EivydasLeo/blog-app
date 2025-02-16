@@ -8,18 +8,18 @@ import { LogoData } from "@/app/utils/dummyData/data";
 import Link from "next/link";
 
 export const Header: React.FC = () => {
-  const { headerLogo } = LogoData;
+    const { headerLogo } = LogoData;
 
-  return (
-    <header className={styles.container}>
-      <Link href={"/"} className={styles.logo}>
-        {headerLogo}
-      </Link>
-      <nav className={stylesNav.container}>
-        <NavigationLinks />
-        <LocalSwitcher />
-      </nav>
-      <Burger />
-    </header>
-  );
+    return (
+        <header className={styles.container}>
+            <Link href={"/"} className={styles.logo}>
+                {headerLogo}
+            </Link>
+            <nav className={stylesNav.container}>
+                <NavigationLinks />
+                <LocalSwitcher />
+            </nav>
+            <Burger />
+        </header>
+    );
 };

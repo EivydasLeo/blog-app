@@ -5,17 +5,17 @@ import { SocialLinks } from "../SocialLinks/SocialLinks";
 import { Copyright } from "../Copyright/Copyright";
 
 export const Footer: React.FC = () => {
-  return (
-    <footer className={styles.container}>
-      <div className={styles.body}>
-        <ul className={styles.links}>
-          <NavigationLinks isFooter />
-        </ul>
-        <div className={styles.social}>
-          <SocialLinks />
-        </div>
-      </div>
-      <Copyright />
-    </footer>
-  );
+    return (
+        <footer className={styles.container}>
+            <div className={styles.body}>
+                <ul className={styles.links}>
+                    <NavigationLinks isFooter />
+                </ul>
+                <div className={styles.social}>
+                    <SocialLinks />
+                </div>
+            </div>
+            <Copyright />
+        </footer>
+    );
 };

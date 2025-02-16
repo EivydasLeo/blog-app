@@ -1,4 +1,4 @@
 export const languages = [
-  { id: "en", title: "English" },
-  { id: "lt", title: "Lithuanian" },
+    { id: "en", title: "English" },
+    { id: "lt", title: "Lithuanian" },
 ];

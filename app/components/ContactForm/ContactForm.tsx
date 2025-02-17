@@ -85,7 +85,7 @@ export default function ContactForm({
                                 className="group-data-[invalid=true]/field:border-destructive focus-visible:group-data-[invalid=true]/field:ring-destructive hover:!placeholder-[#be7c68]"
                                 aria-invalid={!(state.errors?.firstName == null)}
                                 aria-errormessage="error-firstName"
-                                defaultValue={state.defaultValues.firstName}
+                                defaultValue={state.defaultValues.firstName as string}
                             />
                             {state.errors?.firstName != null && (
                                 <p id="error-firstName" className="text-destructive text-sm">
@@ -111,7 +111,7 @@ export default function ContactForm({
                                 className="group-data-[invalid=true]/field:border-destructive focus-visible:group-data-[invalid=true]/field:ring-destructive hover:!placeholder-[#be7c68]"
                                 aria-invalid={!(state.errors?.lastName == null)}
                                 aria-errormessage="error-lastName"
-                                defaultValue={state.defaultValues.lastName}
+                                defaultValue={state.defaultValues.lastName as string}
                             />
                             {state.errors?.lastName != null && (
                                 <p id="error-lastName" className="text-destructive text-sm">
@@ -137,7 +137,7 @@ export default function ContactForm({
                             className="group-data-[invalid=true]/field:border-destructive focus-visible:group-data-[invalid=true]/field:ring-destructive hover:!placeholder-[#be7c68]"
                             aria-invalid={!(state.errors?.email == null)}
                             aria-errormessage="error-email"
-                            defaultValue={state.defaultValues.email}
+                            defaultValue={state.defaultValues.email as string}
                         />
                         {state.errors?.email != null && (
                             <p id="error-email" className="text-destructive text-sm">
@@ -162,7 +162,7 @@ export default function ContactForm({
                             className="group-data-[invalid=true]/field:border-destructive focus-visible:group-data-[invalid=true]/field:ring-destructive hover:!placeholder-[#be7c68]"
                             aria-invalid={!(state.errors?.message == null)}
                             aria-errormessage="error-message"
-                            defaultValue={state.defaultValues.message}
+                            defaultValue={state.defaultValues.message as string}
                         />
                         {state.errors?.message != null && (
                             <p id="error-message" className="text-destructive text-sm">

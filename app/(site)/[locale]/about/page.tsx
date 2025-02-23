@@ -27,20 +27,22 @@ export default async function About({
                         <div key={data._id} className={styles.bio}>
                             <PortableText value={data.bio} />
                             <PortableText value={data.writing} />
-                            {data.books.map((book) => (
-                                <Link key={book._key} href={book.link} className={styles.link}>
-                                    {book.title}
-                                </Link>
-                            ))}
-                            {data.articles.map((article) => (
-                                <Link
-                                    className={styles.link}
-                                    key={article._key}
-                                    href={article.link}
-                                >
-                                    {article.title}
-                                </Link>
-                            ))}
+                            {data.books?.length > 0 &&
+                                data.books.map((book) => (
+                                    <Link key={book._key} href={book.link} className={styles.link}>
+                                        {book.title}
+                                    </Link>
+                                ))}
+                            {data.articles?.length > 0 &&
+                                data.articles.map((article) => (
+                                    <Link
+                                        className={styles.link}
+                                        key={article._key}
+                                        href={article.link}
+                                    >
+                                        {article.title}
+                                    </Link>
+                                ))}
                         </div>
                     ))}
                 </div>

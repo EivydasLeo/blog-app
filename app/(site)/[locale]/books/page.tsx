@@ -31,9 +31,11 @@ export default async function Books({
                         />
                         <div className={styles.description}>
                             <PortableText value={data.description} />
-                            <Link className={styles.link} href={data.link}>
-                                {t("linkTitle")}
-                            </Link>
+                            {data.link !== "" && (
+                                <Link className={styles.link} href={data.link}>
+                                    {t("linkTitle")}
+                                </Link>
+                            )}
                         </div>
                     </div>
                 ))}

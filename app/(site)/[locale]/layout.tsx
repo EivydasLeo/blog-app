@@ -6,7 +6,6 @@ import { montserrat, fraunces, rheinmetall } from "../../fonts/font";
 import "@/app/styles/globals.scss";
 import { Header } from "../../components/Header/Header";
 import { Footer } from "../../components/Footer/Footer";
-import { ThemeProvider } from "../../components/Theme/ThemeContext";
 import { NextIntlClientProvider } from "next-intl";
 import styles from "@/app/styles/components/Main/main.module.scss";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -31,18 +30,18 @@ export default async function RootLayout({
 
     return (
         <html lang={locale}>
-            <body className={`${montserrat.variable} ${fraunces.variable} ${rheinmetall.variable}`}>
+            <body
+                className={`${montserrat.variable} ${fraunces.variable} ${rheinmetall.variable} light`}
+            >
                 <NextIntlClientProvider messages={messages}>
-                    <ThemeProvider>
-                        <div className="container">
-                            <Header />
-                            <main className={styles.container}>
-                                {children}
-                                <SpeedInsights />
-                            </main>
-                            <Footer />
-                        </div>
-                    </ThemeProvider>
+                    <div className="container">
+                        <Header />
+                        <main className={styles.container}>
+                            {children}
+                            <SpeedInsights />
+                        </main>
+                        <Footer />
+                    </div>
                 </NextIntlClientProvider>
             </body>
         </html>

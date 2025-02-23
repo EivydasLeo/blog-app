@@ -27,13 +27,14 @@ export default async function Home({
                             <ArticleCard title={data.name} subtitle={data.headline} />
                             <PortableText value={data.bio} />
                         </div>
-                        <div>
+                        <div className={styles.imageContainer}>
                             <Image
                                 className={styles.image}
                                 src={data.profileImage.image}
                                 alt={data.profileImage.alt}
-                                width={500}
-                                height={600}
+                                quality={100}
+                                layout="fill"
+                                objectFit="cover"
                             />
                         </div>
                     </>

@@ -27,7 +27,7 @@ export default async function Stories({
                             <PortableText value={data.storie} />
                         </div>
                         <Link className={styles.linkNext} href={`/${locale}/stories/${data.slug}`}>
-                            {t("readMore")}
+                            {t("readMore").toUpperCase()}
                         </Link>
                     </div>
                 ))}

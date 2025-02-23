@@ -1,14 +1,16 @@
 $breakpoints: (
-    "mobile": 320px,
-    "tablet": 768px,
-    "desktop": 1024px,
-    "widescreen": 1440px,
-    "fullhd": 1820px,
+    "mobileS": rem(320px),
+    "mobileM": rem(375px),
+    "mobileL": rem(425px),
+    "tablet": rem(768px),
+    "desktop": rem(1024px),
+    "widescreen": rem(1440px),
+    "fullhd": rem(1820px),
 );
 
 @mixin respond-to($from, $to: null) {
     $min: map-get($breakpoints, $from);
-    $max: if($to, map-get($breakpoints, $to) - 1px, null);
+    $max: if($to, map-get($breakpoints, $to) - rem(1px), null);
 
     @if $max {
         @media (min-width: $min) and (max-width: $max) {
@@ -21,14 +23,24 @@ $breakpoints: (
     }
 }
 
-@mixin mobile {
-    @include respond-to("mobile", "tablet") {
+@mixin mobileS {
+    @include respond-to("mobileS") {
+        @content;
+    }
+}
+@mixin mobileM {
+    @include respond-to("mobileM") {
+        @content;
+    }
+}
+@mixin mobileL {
+    @include respond-to("mobileL") {
         @content;
     }
 }
 
 @mixin tablet {
-    @include respond-to("tablet", "desktop") {
+    @include respond-to("tablet") {
         @content;
     }
 }
@@ -40,13 +52,19 @@ $breakpoints: (
 }
 
 @mixin widescreen {
-    @include respond-to("widescreen", "fullhd") {
+    @include respond-to("widescreen") {
         @content;
     }
 }
 
 @mixin fullhd {
     @include respond-to("fullhd") {
+        @content;
+    }
+}
+
+@mixin mobile-only {
+    @include respond-to("mobileS", "tablet") {
         @content;
     }
 }
@@ -70,19 +88,13 @@ $breakpoints: (
 }
 
 @mixin touch {
-    @include respond-to("mobile", "desktop") {
-        @content;
-    }
-}
-
-@mixin until-widescreen {
-    @include respond-to("mobile", "widescreen") {
+    @include respond-to("mobileS", "desktop") {
         @content;
     }
 }
 
 @mixin until($to) {
-    @include respond-to("mobile", $to) {
+    @include respond-to("mobileS", $to) {
         @content;
     }
 }

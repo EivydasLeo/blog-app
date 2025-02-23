@@ -6,7 +6,8 @@
     height: rem(75px);
 
     @include until("desktop") {
-        justify-content: space-around;
+        justify-content: space-between;
+        width: 70%;
     }
 }
 

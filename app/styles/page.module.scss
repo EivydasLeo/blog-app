@@ -1,22 +1,60 @@
 .container {
     display: flex;
-    align-items: center;
-    gap: rem(100px);
     color: $color-black;
+
+    @include mobile-only {
+        flex-direction: column-reverse;
+    }
+
+    @include tablet {
+        align-items: center;
+    }
 }
 
 .item {
     display: flex;
     flex-direction: column;
-    gap: rem(50px);
-    width: 50%;
+
+    @include mobileS {
+        width: 72%;
+    }
+
+    @include tablet {
+        width: 60%;
+    }
+
+    @include tablet {
+        margin-right: rem(60px);
+        gap: rem(50px);
+    }
+}
+
+.imageContainer {
+    position: relative;
+
+    @include mobileS {
+        width: 260px;
+        height: 320px;
+    }
+
+    @include mobileL {
+        width: 320px;
+        height: 320px;
+    }
+
+    @include tablet {
+        width: 400px;
+        height: 599px;
+    }
 }
 
 .image {
-    box-shadow: 0 0 rem(15px) 0px $color-very-dark;
+    box-shadow: 0 0 15px 0px $color-very-dark;
 }
 
 .divider {
-    position: absolute;
-    top: rem(180px);
+    @include tablet {
+        position: absolute;
+        top: rem(220px);
+    }
 }

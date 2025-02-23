@@ -47,7 +47,8 @@
     cursor: pointer;
     position: relative;
     width: fit-content;
-    font-size: rem(14px);
+    font-family: none;
+    font-size: rem(12px);
 
     &::before {
         content: "";

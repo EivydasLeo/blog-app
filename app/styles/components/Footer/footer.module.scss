@@ -36,7 +36,7 @@
     flex-wrap: wrap;
     gap: rem(20px);
 
-    @include mobile {
+    @include mobileS {
         gap: rem(10px);
         justify-content: center;
     }

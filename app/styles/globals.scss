@@ -62,8 +62,16 @@ $font-size-dec: 14px;
     $font-size-upper: $font-size-upper - $font-size-dec;
 }
 
-.theme {
-    transition: 1s all ease;
+h1 {
+    @include mobile-tablet {
+        font-size: rem(30px);
+    }
+}
+
+h3 {
+    @include mobile-tablet {
+        font-size: rem(24px);
+    }
 }
 
 .container {

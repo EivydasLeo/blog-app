@@ -2,8 +2,9 @@
     display: flex;
     color: $color-black;
 
-    @include mobile-only {
+    @include mobile-tablet {
         flex-direction: column-reverse;
+        gap: rem(20px);
     }
 
     @include tablet {
@@ -15,17 +16,18 @@
     display: flex;
     flex-direction: column;
 
+    @include mobile-tablet {
+        gap: rem(20px);
+    }
+
     @include mobileS {
         width: 72%;
     }
 
     @include tablet {
         width: 60%;
-    }
-
-    @include tablet {
         margin-right: rem(60px);
-        gap: rem(50px);
+        gap: rem(40px);
     }
 }
 
@@ -37,9 +39,14 @@
         height: 320px;
     }
 
-    @include mobileL {
+    @include mobileM {
         width: 320px;
-        height: 320px;
+        height: 360px;
+    }
+
+    @include mobileL {
+        width: 340px;
+        height: 380px;
     }
 
     @include tablet {
@@ -54,6 +61,11 @@
 
 .divider {
     @include tablet {
+        position: absolute;
+        top: rem(180px);
+    }
+
+    @include desktop {
         position: absolute;
         top: rem(220px);
     }

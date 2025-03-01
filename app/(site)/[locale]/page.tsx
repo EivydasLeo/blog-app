@@ -33,8 +33,8 @@ export default async function Home({
                                 src={data.profileImage.image}
                                 alt={data.profileImage.alt}
                                 quality={100}
-                                layout="fill"
-                                objectFit="cover"
+                                fill
+                                style={{ objectFit: "cover" }}
                             />
                         </div>
                     </>

@@ -28,6 +28,7 @@ export default async function Books({
                             alt={data.bookImage.alt}
                             width={300}
                             height={300}
+                            quality={100}
                         />
                         <div className={styles.description}>
                             <PortableText value={data.description} />

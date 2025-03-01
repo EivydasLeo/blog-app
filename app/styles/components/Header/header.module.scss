@@ -17,3 +17,33 @@
     font-size: $font-size-40;
     color: $color-desaturated-red;
 }
+
+@keyframes fadeInDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    background: $color-white-smoke;
+    box-shadow: 0 0 20px #0000001a;
+    animation: fadeInDown 0.4s ease-out;
+
+    @include touch {
+        justify-content: space-around;
+    }
+
+    @include desktop {
+        justify-content: center;
+    }
+}

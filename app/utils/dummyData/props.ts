@@ -13,7 +13,6 @@ export interface StoryProps {
     _id: string;
     createdAt: Date;
     username: string;
-    // content?: string;
     desc?: string;
 }
 

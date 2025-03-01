@@ -3,6 +3,10 @@
     flex-direction: column;
     gap: rem(40px);
     max-width: fit-content;
+
+    @include until("widescreen") {
+        width: 68%;
+    }
 }
 
 .item {
@@ -20,6 +24,7 @@
 
 .text {
     text-align: justify;
+    word-break: break-all;
     max-width: rem(792px);
 }
 
@@ -47,29 +52,15 @@
     cursor: pointer;
     position: relative;
     width: fit-content;
-    font-family: none;
-    font-size: rem(12px);
-
-    &::before {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        height: rem(2px);
-        background-color: $color-desaturated-red;
-        transform: scaleX(0);
-        transition: transform 0.3s ease-in-out;
-    }
+    font-family: var(--font-montserrat), sans-serif;
+    @include stories-link-button;
 
     &:hover {
-        &::before {
-            transform: scaleX(1);
-        }
+        color: $color-black;
     }
 
     &::after {
-        content: "›";
+        content: "→";
     }
 }
 

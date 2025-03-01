@@ -16,4 +16,8 @@
         background-color: $color-desaturated-red;
         color: $color-white-smoke;
     }
+
+    @include mobile-only {
+        max-width: rem(200px);
+    }
 }

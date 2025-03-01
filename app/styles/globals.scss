@@ -64,13 +64,17 @@ $font-size-dec: 14px;
 
 h1 {
     @include mobile-tablet {
-        font-size: rem(30px);
+        font-size: rem(24px);
+    }
+
+    @include tablet-only {
+        font-size: rem(40px);
     }
 }
 
 h3 {
     @include mobile-tablet {
-        font-size: rem(24px);
+        font-size: rem(20px);
     }
 }
 

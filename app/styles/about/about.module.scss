@@ -1,12 +1,17 @@
 .container {
     display: flex;
     color: $color-black;
+
+    @include mobile-tablet {
+        gap: rem(20px);
+        flex-direction: column-reverse;
+    }
 }
 
 .item {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 60%;
 }
 
 .bio {
@@ -14,16 +19,48 @@
     flex-direction: column;
     gap: rem(20px);
     text-align: justify;
+    word-break: break-all;
 }
 
 .slider {
-    position: relative;
-    left: rem(150px);
-    max-width: rem(500px);
-    max-height: rem(600px);
     box-shadow: 0 0 15px 0px #180701;
+
+    @include mobile-tablet {
+        $size: rem(300px);
+
+        max-width: $size;
+        max-height: $size;
+
+        img {
+            max-width: $size;
+            max-height: $size;
+        }
+    }
+
+    @include mobileL-tablet {
+        $size: rem(400px);
+
+        max-width: $size;
+        max-height: $size;
+
+        img {
+            max-width: $size;
+            max-height: $size;
+        }
+    }
+
+    @include tablet {
+        max-width: rem(400px);
+        max-height: rem(599px);
+        margin-left: rem(60px);
+    }
 }
 
 .link {
     text-decoration: underline;
+    color: $color-desaturated-red;
+
+    &:hover {
+        color: $color-black;
+    }
 }

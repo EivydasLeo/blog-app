@@ -69,6 +69,12 @@ $breakpoints: (
     }
 }
 
+@mixin mobileL-tablet {
+    @include respond-to("mobileL", "tablet") {
+        @content;
+    }
+}
+
 @mixin mobile-tablet {
     @include respond-to("mobileS", "tablet") {
         @content;

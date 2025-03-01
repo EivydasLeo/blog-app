@@ -6,6 +6,26 @@
 
 .image {
     box-shadow: 0 0 15px 0px #180701;
+
+    @include mobileS {
+        width: 260px;
+        height: 200px;
+    }
+
+    @include mobileM {
+        width: 320px;
+        height: 320px;
+    }
+
+    @include mobileL {
+        width: 340px;
+        height: 340px;
+    }
+
+    @include tablet {
+        width: 640px;
+        height: 448px;
+    }
 }
 
 .title {

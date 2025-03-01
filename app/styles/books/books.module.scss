@@ -8,17 +8,55 @@
 .item {
     display: flex;
     gap: rem(30px);
-    max-width: rem(900px);
+    max-width: 70%;
+    justify-content: center;
+
+    img {
+        @include mobileS {
+            width: rem(180px);
+            height: rem(280px);
+        }
+
+        @include mobileM {
+            width: rem(210px);
+            height: rem(300px);
+        }
+
+        @include mobileL {
+            width: rem(250px);
+            height: rem(300px);
+        }
+    }
+
+    @include mobile-tablet {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
 
 .description {
     display: flex;
     flex-direction: column;
-    gap: rem(40px);
     max-width: fit-content;
+    text-align: justify;
+    word-break: break-all;
+
+    @include mobile-tablet {
+        gap: rem(20px);
+    }
+
+    @include tablet {
+        gap: rem(40px);
+    }
 }
 
 .link {
     text-decoration: underline;
     width: fit-content;
+
+    color: $color-desaturated-red;
+
+    &:hover {
+        color: $color-black;
+    }
 }

@@ -14,9 +14,13 @@ export default function Burger(): JSX.Element {
     const navigationKeys = Object.keys(t.raw("navigation"));
 
     const handleLinkActive = (path: string): string => {
-        const currentPath = pathname.split("/")[2];
-        const validPath = currentPath === "" ? null : currentPath;
-        return validPath === path ? styles.active : "";
+        const currentPath: string = pathname.split("/")[2] ?? "";
+
+        if (path === "" && currentPath === "") {
+            return styles.active;
+        }
+
+        return currentPath === path ? styles.active : "";
     };
 
     return (

@@ -16,8 +16,25 @@
     font-family: var(--font-fraunces);
 }
 
+.title {
+    font-size: $font-size-60;
+
+    @include mobile-tablet {
+        font-size: rem(24px);
+    }
+
+    @include tablet-only {
+        font-size: rem(40px);
+    }
+}
+
 .subtitle {
     font-weight: $font-weight-semi-bold;
+    font-size: $font-size-32;
+
+    @include mobile-tablet {
+        font-size: rem(20px);
+    }
 }
 
 .text {

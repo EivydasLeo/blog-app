@@ -31,6 +31,7 @@ export default function Burger(): JSX.Element {
                         variant="outline"
                         size="icon"
                         className="lg:hidden border-[#be7c68] bg-[#be7c68] text-white rounded-full"
+                        aria-label="Open"
                     >
                         <MenuIcon className="!h-5 !w-5" />
                     </Button>

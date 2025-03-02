@@ -22,7 +22,7 @@ export default async function Stories({
             <div className={styles.container}>
                 {storie?.map((data) => (
                     <div key={data._id} className={styles.item}>
-                        <h3 className={styles.title}>{data.title}</h3>
+                        <h1 className={styles.title}>{data.title}</h1>
                         <div className={`${styles.text} ${styles.mask}`}>
                             <PortableText value={data.storie} />
                         </div>

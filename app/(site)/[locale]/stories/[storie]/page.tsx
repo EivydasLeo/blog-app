@@ -26,7 +26,7 @@ export default async function Storie({
                 <Link className={styles.linkBack} href={`/${locale}/stories/`} />
                 {data && (
                     <div key={data._id} className={styles.item}>
-                        <h3 className={styles.title}>{data.title}</h3>
+                        <h1 className={styles.title}>{data.title}</h1>
                         <div className={styles.text}>
                             <PortableText value={data.storie} />
                         </div>

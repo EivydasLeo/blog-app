@@ -11,7 +11,7 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({ title, subtitle, text 
     return (
         <div className={styles.container}>
             {title !== undefined && <h1 className={styles.title}>{title}</h1>}
-            {subtitle !== undefined && <h3 className={styles.subtitle}>{subtitle}</h3>}
+            {subtitle !== undefined && <h2 className={styles.subtitle}>{subtitle}</h2>}
             {text !== undefined && <p className={styles.text}>{text}</p>}
         </div>
     );

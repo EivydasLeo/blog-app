@@ -20,12 +20,13 @@ export default function LocalSwitcher(): JSX.Element {
     };
 
     return (
-        <label className={styles.label}>
+        <div className={styles.container}>
             <select
                 defaultValue={localActive}
                 className={styles.select}
                 onChange={onSelectChange}
                 disabled={isPending}
+                aria-label="Select language"
             >
                 {LocalesData.map((locale) => (
                     <option key={locale} value={locale}>
@@ -33,6 +34,6 @@ export default function LocalSwitcher(): JSX.Element {
                     </option>
                 ))}
             </select>
-        </label>
+        </div>
     );
 }

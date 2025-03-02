@@ -9,7 +9,14 @@ export const SocialLinks: React.FC = () => {
         <div className={styles.container}>
             {SocialLinksData.map(({ src, alt, href }, index) => (
                 <Link className={styles.link} key={index} href={href}>
-                    <Image className={styles.icon} src={src} alt={alt} fill={true} loading="lazy" />
+                    <Image
+                        className={styles.icon}
+                        src={src}
+                        alt={alt}
+                        fill={true}
+                        loading="lazy"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    />
                 </Link>
             ))}
         </div>

@@ -20,6 +20,11 @@
 .title {
     display: inline-block;
     max-width: fit-content;
+    font-size: $font-size-32;
+
+    @include mobile-tablet {
+        font-size: rem(20px);
+    }
 }
 
 .text {

@@ -23,6 +23,4 @@ This is a blog application built with Next.js and Sanity as the content manageme
 
 ## The Website Is Live!
 
-The website is currently live, but it’s not fully finished. The main functionality has been implemented, but styling such as responsive design for mobile and tablet, accessibility, and content updates are still in progress.
-
 https://www.GretaSka.com/

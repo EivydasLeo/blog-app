@@ -15,14 +15,10 @@
 .item {
     display: flex;
     flex-direction: column;
-    word-break: break-all;
+    gap: rem(20px);
 
     p {
         text-align: justify;
-    }
-
-    @include mobile-tablet {
-        gap: rem(20px);
     }
 
     @include mobileS {
@@ -32,26 +28,15 @@
     @include tablet {
         width: 60%;
         margin-right: rem(60px);
-        gap: rem(40px);
     }
 }
 
-.imageContainer {
-    position: relative;
+.image {
+    box-shadow: 0 0 15px 0px $color-very-dark;
 
     @include mobileS {
         width: 260px;
         height: 320px;
-    }
-
-    @include mobileM {
-        width: 320px;
-        height: 360px;
-    }
-
-    @include mobileL {
-        width: 340px;
-        height: 380px;
     }
 
     @include tablet {
@@ -60,18 +45,14 @@
     }
 }
 
-.image {
-    box-shadow: 0 0 15px 0px $color-very-dark;
-}
-
 .divider {
     @include tablet {
         position: absolute;
-        top: rem(200px);
+        top: rem(126px);
     }
 
     @include desktop {
         position: absolute;
-        top: rem(220px);
+        top: rem(170px);
     }
 }

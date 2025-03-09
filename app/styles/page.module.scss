@@ -36,12 +36,10 @@
 
     @include mobileS {
         width: 220px;
-        height: 300px;
     }
 
     @include tablet {
         width: 400px;
-        height: 599px;
     }
 }
 

@@ -15,7 +15,7 @@ This is a blog application built with Next.js and Sanity as the content manageme
 
 1. `git clone https://github.com/EivydasLeo/blog-app.git`
 2. cd to the `blog-app` folder and `npm install`
-3. Node version `18.17.0` or later is required
+3. Node version `18.17.0` or later is required.
 4. Rename `.env.sample` to `.env.local` and change the `RESEND_ADMIN_EMAIL` value to your email address. The other environment variables are already set up for local development, so you don't need to modify them.
 5. Run `npm run dev`
 6. Access the application at `http://localhost:3000`, with dynamic routes for different locales (e.g., /en for English, /lt for Lithuanian)

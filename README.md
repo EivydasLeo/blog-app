@@ -15,14 +15,12 @@ This is a blog application built with Next.js and Sanity as the content manageme
 
 1. `git clone https://github.com/EivydasLeo/blog-app.git`
 2. cd to the `blog-app` folder and `npm install`
-3. Node version `18.17.0` or later is required
+3. Node version `18.17.0` or later is required.
 4. Rename `.env.sample` to `.env.local` and change the `RESEND_ADMIN_EMAIL` value to your email address. The other environment variables are already set up for local development, so you don't need to modify them.
 5. Run `npm run dev`
 6. Access the application at `http://localhost:3000`, with dynamic routes for different locales (e.g., /en for English, /lt for Lithuanian)
 7. To access Sanity Studio, visit `http://localhost:3000/studio`. However, you will need my authorization to access it, so please contact me.
 
 ## The Website Is Live!
-
-The website is currently live, but it’s not fully finished. The main functionality has been implemented, but styling such as responsive design for mobile and tablet, accessibility, and content updates are still in progress.
 
 https://www.GretaSka.com/

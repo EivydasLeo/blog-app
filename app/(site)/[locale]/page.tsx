@@ -27,18 +27,17 @@ export default async function Home({
                             <ArticleCard title={data.name} subtitle={data.headline} />
                             <PortableText value={data.bio} />
                         </div>
-                        <div className={styles.imageContainer}>
-                            <Image
-                                className={styles.image}
-                                src={data.profileImage.image}
-                                alt={data.profileImage.alt}
-                                quality={100}
-                                fill
-                                style={{ objectFit: "cover" }}
-                                priority
-                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                            />
-                        </div>
+                        <Image
+                            className={styles.image}
+                            src={data.profileImage.image}
+                            alt={data.profileImage.alt}
+                            quality={100}
+                            layout="intrinsic"
+                            width={400}
+                            height={599}
+                            priority
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 400px, 400px"
+                        />
                     </>
                 ))}
             </div>

@@ -21,15 +21,14 @@ const ProfileSlider = ({ slides }: SlideType): JSX.Element => {
         >
             {slides.map((slide: PhotoType) => (
                 <SwiperSlide key={slide._id}>
-                    <div>
-                        <Image
-                            src={slide.image.asset.url}
-                            alt={slide.alt}
-                            width={400}
-                            height={599}
-                            quality={100}
-                        />
-                    </div>
+                    <Image
+                        src={slide.image.asset.url}
+                        alt={slide.alt}
+                        width={400}
+                        height={599}
+                        quality={100}
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 400px, 400px"
+                    />
                 </SwiperSlide>
             ))}
         </Swiper>

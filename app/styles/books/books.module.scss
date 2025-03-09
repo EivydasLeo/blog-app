@@ -39,7 +39,6 @@
     flex-direction: column;
     max-width: fit-content;
     text-align: justify;
-    word-break: break-all;
 
     @include mobile-tablet {
         gap: rem(20px);

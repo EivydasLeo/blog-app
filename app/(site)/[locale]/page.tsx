@@ -34,7 +34,6 @@ export default async function Home({
                             quality={90}
                             width={400}
                             height={599}
-                            layout="intrinsic"
                             priority
                             sizes="(min-width: 780px) 400px, (min-width: 340px) 220px, calc(-900vw + 3100px)"
                         />

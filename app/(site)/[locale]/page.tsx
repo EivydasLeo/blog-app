@@ -35,6 +35,7 @@ export default async function Home({
                             width={400}
                             height={599}
                             priority
+                            sizes="(min-width: 780px) 400px, (min-width: 340px) 220px, calc(-900vw + 3100px)"
                         />
                     </>
                 ))}

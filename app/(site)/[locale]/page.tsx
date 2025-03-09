@@ -31,8 +31,7 @@ export default async function Home({
                             className={styles.image}
                             src={data.profileImage.image}
                             alt={data.profileImage.alt}
-                            quality={100}
-                            layout="intrinsic"
+                            quality={90}
                             width={400}
                             height={599}
                             priority

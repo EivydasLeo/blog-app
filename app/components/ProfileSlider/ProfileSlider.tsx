@@ -26,7 +26,7 @@ const ProfileSlider = ({ slides }: SlideType): JSX.Element => {
                         alt={slide.alt}
                         width={400}
                         height={599}
-                        quality={100}
+                        quality={90}
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 400px, 400px"
                     />
                 </SwiperSlide>

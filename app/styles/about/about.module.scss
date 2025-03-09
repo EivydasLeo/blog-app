@@ -25,33 +25,30 @@
     box-shadow: 0 0 15px 0px #180701;
 
     @include mobile-tablet {
-        $size: rem(300px);
+        $mobile-size-width: rem(220px);
+        $mobile-size-height: rem(300px);
 
-        max-width: $size;
-        max-height: $size;
+        max-width: $mobile-size-width;
+        max-height: $mobile-size-height;
 
-        img {
-            max-width: $size;
-            max-height: $size;
-        }
-    }
-
-    @include mobileL-tablet {
-        $size: rem(400px);
-
-        max-width: $size;
-        max-height: $size;
-
-        img {
-            max-width: $size;
-            max-height: $size;
+        & img {
+            width: $mobile-size-width;
+            height: $mobile-size-height;
         }
     }
 
     @include tablet {
-        max-width: rem(400px);
-        max-height: rem(599px);
+        $tablet-size-width: rem(400px);
+        $tablet-size-height: rem(599px);
+
+        max-width: $tablet-size-width;
+        max-height: $tablet-size-height;
         margin-left: rem(60px);
+
+        & img {
+            width: $tablet-size-width;
+            height: $tablet-size-height;
+        }
     }
 }
 

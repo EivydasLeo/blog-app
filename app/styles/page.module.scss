@@ -35,8 +35,8 @@
     box-shadow: 0 0 15px 0px $color-very-dark;
 
     @include mobileS {
-        width: 260px;
-        height: 320px;
+        width: 220px;
+        height: 300px;
     }
 
     @include tablet {

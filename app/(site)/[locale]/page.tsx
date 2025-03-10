@@ -8,6 +8,8 @@ import { getAuthor } from "@/sanity/sanity.query";
 import type { AuthorType } from "@/types/types";
 import { PortableText } from "@portabletext/react";
 
+export const revalidate = 0;
+
 export default async function Home({
     params,
 }: {

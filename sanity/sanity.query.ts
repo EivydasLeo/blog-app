@@ -89,7 +89,7 @@ export async function getStories(locale: string): Promise<StorieTypes[]> {
     );
 }
 
-export async function getSingleStorie(locale: string, slug: string): Promise<StorieTypes[]> {
+export async function getSingleStorie(locale: string, slug: string): Promise<StorieTypes> {
     return await client.fetch(
         groq`*[_type == "stories" && slug.current == $slug][0]{
       _id,

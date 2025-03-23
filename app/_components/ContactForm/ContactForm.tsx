@@ -9,11 +9,11 @@ import {
     CardDescription,
     CardContent,
     CardFooter,
-} from "@/app/components/ui/card";
-import { Input } from "@/app/components/ui/input";
-import { Label } from "@/app/components/ui/label";
-import { Button } from "@/app/components/ui/button";
-import { Textarea } from "@/app/components/ui/textarea";
+} from "@/app/_components/ui/card";
+import { Input } from "@/app/_components/ui/input";
+import { Label } from "@/app/_components/ui/label";
+import { Button } from "@/app/_components/ui/button";
+import { Textarea } from "@/app/_components/ui/textarea";
 import { cn } from "@/lib/utils";
 import { contactFormAction } from "@/lib/actions";
 import { Check } from "lucide-react";

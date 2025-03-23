@@ -1,9 +1,9 @@
 import React from "react";
 import styles from "@/app/styles/about/about.module.scss";
-import { Divider } from "@/app/components/Divider/Divider";
+import { Divider } from "@/app/_components/Divider/Divider";
 import { getSlide, getAbout } from "@/sanity/sanity.query";
 import { type SlideType, type AboutType } from "@/types/types";
-import ProfileSlider from "@/app/components/ProfileSlider/ProfileSlider";
+import ProfileSlider from "@/app/_components/ProfileSlider/ProfileSlider";
 import { PortableText } from "@portabletext/react";
 import Link from "next/link";
 import { getTranslations } from "next-intl/server";

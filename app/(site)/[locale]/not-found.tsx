@@ -1,8 +1,8 @@
 import styles from "@/app/styles/components/NotFound/notFound.module.scss";
-import { ButtonLink } from "@/app/components/ButtonLink/ButtonLink";
+import { ButtonLink } from "@/app/_components/ButtonLink/ButtonLink";
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
-import { Divider } from "@/app/components/Divider/Divider";
+import { Divider } from "@/app/_components/Divider/Divider";
 
 export default async function NotFound(): Promise<JSX.Element> {
     const t = await getTranslations("NotFoundPage");

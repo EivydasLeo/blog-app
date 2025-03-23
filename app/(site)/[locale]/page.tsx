@@ -2,13 +2,11 @@ import React from "react";
 import { getTranslations } from "next-intl/server";
 import styles from "@/app/styles/page.module.scss";
 import Image from "next/image";
-import { ArticleCard } from "../../components/ArticleCard/ArticleCard";
-import { Divider } from "../../components/Divider/Divider";
+import { ArticleCard } from "../../_components/ArticleCard/ArticleCard";
+import { Divider } from "../../_components/Divider/Divider";
 import { getAuthor } from "@/sanity/sanity.query";
 import type { AuthorType } from "@/types/types";
 import { PortableText } from "@portabletext/react";
-
-export const revalidate = 0;
 
 export default async function Home({
     params,

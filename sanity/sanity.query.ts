@@ -1,7 +1,15 @@
 import { groq } from "next-sanity";
 import client from "./sanity.client";
+import {
+    type PhotoType,
+    type AuthorType,
+    type SlideType,
+    type AboutType,
+    type StorieTypes,
+    type BookType,
+} from "@/types/types";
 
-export async function getAuthor(locale: string) {
+export async function getAuthor(locale: string): Promise<AuthorType[]> {
     return await client.fetch(
         groq`*[_type == "author"]{
       _id,
@@ -17,7 +25,7 @@ export async function getAuthor(locale: string) {
     );
 }
 
-export async function getPhoto() {
+export async function getPhoto(): Promise<PhotoType[]> {
     return await client.fetch(
         groq`*[_type == "photo"]{
       _id,
@@ -35,7 +43,7 @@ export async function getPhoto() {
     );
 }
 
-export async function getSlide() {
+export async function getSlide(): Promise<SlideType> {
     return await client.fetch(
         groq`*[_type == "slides"] {
       _id,
@@ -54,7 +62,7 @@ export async function getSlide() {
     );
 }
 
-export async function getAbout(locale: string) {
+export async function getAbout(locale: string): Promise<AboutType> {
     return await client.fetch(
         groq`*[_type == "about"]{
       _id,
@@ -69,7 +77,7 @@ export async function getAbout(locale: string) {
     );
 }
 
-export async function getStories(locale: string) {
+export async function getStories(locale: string): Promise<StorieTypes> {
     return await client.fetch(
         groq`*[_type == "stories"]{
       _id,
@@ -81,7 +89,7 @@ export async function getStories(locale: string) {
     );
 }
 
-export async function getSingleStorie(locale: string, slug: string) {
+export async function getSingleStorie(locale: string, slug: string): Promise<StorieTypes> {
     return await client.fetch(
         groq`*[_type == "stories" && slug.current == $slug][0]{
       _id,
@@ -92,7 +100,7 @@ export async function getSingleStorie(locale: string, slug: string) {
     );
 }
 
-export async function getBook(locale: string) {
+export async function getBook(locale: string): Promise<BookType> {
     return await client.fetch(
         groq`*[_type == "books"]{
       _id,

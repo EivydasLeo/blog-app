@@ -43,7 +43,7 @@ export async function getPhoto(): Promise<PhotoType[]> {
     );
 }
 
-export async function getSlide(): Promise<SlideType> {
+export async function getSlide(): Promise<SlideType[]> {
     return await client.fetch(
         groq`*[_type == "slides"] {
       _id,
@@ -62,7 +62,7 @@ export async function getSlide(): Promise<SlideType> {
     );
 }
 
-export async function getAbout(locale: string): Promise<AboutType> {
+export async function getAbout(locale: string): Promise<AboutType[]> {
     return await client.fetch(
         groq`*[_type == "about"]{
       _id,
@@ -77,7 +77,7 @@ export async function getAbout(locale: string): Promise<AboutType> {
     );
 }
 
-export async function getStories(locale: string): Promise<StorieTypes> {
+export async function getStories(locale: string): Promise<StorieTypes[]> {
     return await client.fetch(
         groq`*[_type == "stories"]{
       _id,
@@ -89,7 +89,7 @@ export async function getStories(locale: string): Promise<StorieTypes> {
     );
 }
 
-export async function getSingleStorie(locale: string, slug: string): Promise<StorieTypes> {
+export async function getSingleStorie(locale: string, slug: string): Promise<StorieTypes[]> {
     return await client.fetch(
         groq`*[_type == "stories" && slug.current == $slug][0]{
       _id,
@@ -100,7 +100,7 @@ export async function getSingleStorie(locale: string, slug: string): Promise<Sto
     );
 }
 
-export async function getBook(locale: string): Promise<BookType> {
+export async function getBook(locale: string): Promise<BookType[]> {
     return await client.fetch(
         groq`*[_type == "books"]{
       _id,

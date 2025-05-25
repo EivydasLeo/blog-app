@@ -23,4 +23,4 @@ This is a blog application built with Next.js and Sanity as the content manageme
 
 ## The Website Is Live!
 
-https://www.GretaSka.com/
+https://blog-app-eivydas.vercel.app/en

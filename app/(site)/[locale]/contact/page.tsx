@@ -1,7 +1,7 @@
 import React from "react";
 import { getTranslations } from "next-intl/server";
-import ContactForm from "@/app/components/ContactForm/ContactForm";
-import { Divider } from "@/app/components/Divider/Divider";
+import ContactForm from "@/app/_components/ContactForm/ContactForm";
+import { Divider } from "@/app/_components/Divider/Divider";
 import styles from "@/app/styles/contact/contact.module.scss";
 
 export const metadata = {

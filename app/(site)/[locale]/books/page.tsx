@@ -3,7 +3,7 @@ import styles from "@/app/styles/books/books.module.scss";
 import { getBook } from "@/sanity/sanity.query";
 import type { BookType } from "@/types/types";
 import { PortableText } from "@portabletext/react";
-import { Divider } from "@/app/components/Divider/Divider";
+import { Divider } from "@/app/_components/Divider/Divider";
 import Image from "next/image";
 import Link from "next/link";
 import { getTranslations } from "next-intl/server";

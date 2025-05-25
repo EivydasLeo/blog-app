@@ -1,6 +1,6 @@
 "use client";
-import { Sheet, SheetTrigger, SheetContent, SheetClose } from "@/app/components/ui/sheet";
-import { Button } from "@/app/components/ui/button";
+import { Sheet, SheetTrigger, SheetContent, SheetClose } from "@/app/_components/ui/sheet";
+import { Button } from "@/app/_components/ui/button";
 import { Link } from "@/i18n/routing";
 import styles from "@/app/styles/components/Burger/burger.module.scss";
 import { LocalesData, LogoData } from "@/app/utils/dummyData/data";

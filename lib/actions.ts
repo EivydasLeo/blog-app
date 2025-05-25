@@ -4,7 +4,7 @@
 import { contactFormSchema } from "@/lib/schema";
 import { z } from "zod";
 import { Resend } from "resend";
-import { EmailTemplate } from "@/app/components/ui/email-template";
+import { EmailTemplate } from "@/app/_components/ui/email-template";
 import { getTranslations } from "next-intl/server";
 
 const resend = new Resend(process.env.RESEND_API_KEY);

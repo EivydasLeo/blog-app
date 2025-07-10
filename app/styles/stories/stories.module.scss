@@ -30,6 +30,10 @@
 .text {
     text-align: justify;
     max-width: rem(792px);
+
+    p:first-of-type {
+        margin-bottom: rem(10px);
+    }
 }
 
 .mask {

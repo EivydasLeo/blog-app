@@ -31,18 +31,26 @@
     }
 }
 
-.image {
+.imageWrapper {
+    position: relative;
+    width: 100%;
+    max-width: rem(400px);
+    aspect-ratio: 2 / 3;
+    min-width: rem(260px);
+    flex-shrink: 0;
     box-shadow: 0 0 15px 0px $color-very-dark;
 
-    @include mobileS {
-        width: rem(220px);
-        height: rem(300px);
+    @include mobile-tablet {
+        aspect-ratio: 3/3;
     }
 
-    @include tablet {
-        width: rem(400px);
-        height: rem(599px);
+    @include tablet-only {
+        aspect-ratio: 3/3;
     }
+}
+
+.image {
+    object-fit: cover;
 }
 
 .divider {

@@ -11,7 +11,7 @@ import styles from "@/app/styles/components/Main/main.module.scss";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
-    title: "Greta SKA",
+    title: "Avery Langston",
     description: "Blog Page",
 };
 

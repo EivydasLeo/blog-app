@@ -39,19 +39,12 @@
     flex-direction: column;
     max-width: fit-content;
     text-align: justify;
-
-    @include mobile-tablet {
-        gap: rem(20px);
-    }
-
-    @include tablet {
-        gap: rem(40px);
-    }
 }
 
 .link {
     text-decoration: underline;
     width: fit-content;
+    margin-top: rem(40px);
 
     color: $color-desaturated-red;
 

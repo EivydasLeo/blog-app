@@ -30,6 +30,7 @@
 .text {
     text-align: justify;
     max-width: rem(792px);
+    font-size-adjust: 0.5;
 
     p:first-of-type {
         margin-bottom: rem(10px);
